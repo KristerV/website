@@ -55,6 +55,16 @@ Example to start a interactive guide of `.gitpod.yml` configuration file:
 gp init -i
 ```
 
+## rebuild
+
+> The `gp rebuild` command is currently in [Beta](/docs/help/public-roadmap/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/7671).
+
+Validates the workspace configuration in `.gitpod.yml` and workspace images.
+
+```sh
+gp rebuild
+```
+
 ## open
 
 Modern editors/IDE's support command line tooling to open a file (e.g. VS Code `code foo.txt`). In Gitpod, this can be done using `gp open <filename>`.
@@ -324,14 +334,4 @@ Opens the Gitpod documentation in a new browser tab.
 
 ```sh
 gp docs
-```
-
-## rebuild
-
-> {title} is currently in [Beta](/docs/help/public-roadmap/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
-
-Rebuilds the workspace image, it's useful to validate and debug your [custom Workspace image](/docs/configure/workspaces/workspace-image#custom-base-image).
-
-```sh
-gp rebuild
 ```

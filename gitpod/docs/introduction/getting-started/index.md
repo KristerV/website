@@ -27,7 +27,6 @@ In this guide we'll walk you through the basics to get up and running with Gitpo
 - [Step 1: Your first workspace](#step-1-your-first-workspace)
 - [Step 2: Customize Gitpod](#step-2-customize-gitpod)
 - [Step 3: Gitpodify a project](#step-3-gitpodify-a-project)
-- [Step 4: Collaborate](#step-4-collaborate)
 
 ## Step 1: Your first workspace
 
@@ -110,16 +109,4 @@ ports:
 
 **Caption:** An example project configured to install, build and run a `yarn` project with a webserver, exposed on port 3000. On start, the webserver preview is opened automatically.
 
-### Gitpod, but faster
-
-You might have noticed the different task commands above, such as `init` and `before`. See [Workspace Tasks](/docs/configure/workspaces/tasks) for more.
-
-Excellent! To learn more about the difference between init and command, please have a look at Start Tasks.
-
 See the [.gitpod.yml reference page](/docs/references/gitpod-yml) for more.
-
-## Step 4: Collaborate
-
-`youtube: TrY15zN98p8`
-
-Gitpod can provide fully initialized, perfectly set-up developer environments for any kind of software project. This page helps you understand how to provide such a configuration for _your project_.
