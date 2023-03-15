@@ -68,7 +68,7 @@ export const features: Feature[] = [
   {
     ...multiTrackDevelopmentFeature,
     paragraph:
-      "You can have multiple workspaces running at the same time. Start your day by opening each new pull-request in seperate side by side workspaces. Thanks to <a href='https://www.youtube.com/watch?v=ZtlJ0PakUHQ'>pre-builds</a> contributions are already compiled and ready to go.",
+      "You can have multiple workspaces running at the same time. Start your day by opening each new pull-request in seperate side by side workspaces. Thanks to <a href='https://www.youtube.com/watch?v=DwkoOz1GSVg'>pre-builds</a> contributions are already compiled and ready to go.",
   },
   {
     title: "Accept contributions safely",

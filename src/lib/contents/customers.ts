@@ -3,6 +3,7 @@ import redwoodjsSvelte from "$lib/components/svgs/customers/redwoodjs.svelte";
 import sharesSvelte from "$lib/components/svgs/customers/shares.svelte";
 import vizlibSvelte from "$lib/components/svgs/customers/vizlib.svelte";
 import factorialSvelte from "$lib/components/svgs/customers/factorial.svelte";
+import quizletSvelte from "$lib/components/svgs/customers/quizlet.svelte";
 import type { Feature } from "$lib/types/feature";
 import type { Quote } from "$lib/types/quote";
 
@@ -81,7 +82,23 @@ export const factorialQuote: Quote = {
   },
 };
 
+export const quizletQuote: Quote = {
+  text: "We were able to modernize our development environment and increase internal developer satisfaction by 45 percentage points.",
+  author: "Roger Goldfinger",
+  jobTitle: "Senior Staff Software Engineer at Quizlet",
+  companyLogo: quizletSvelte,
+  img: {
+    src: "/images/customers/quizlet/quote.png",
+    alt: "Quizlet",
+  },
+  link: {
+    href: "/customers/quizlet",
+    text: "View customer story",
+  },
+};
+
 export const quotes: Quote[] = [
+  quizletQuote,
   factorialQuote,
   sharesIoQuote,
   vizlibQuote,

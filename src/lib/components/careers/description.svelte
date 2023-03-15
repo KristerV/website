@@ -59,7 +59,7 @@
 
     <p>
       👐 We live by our <a
-        sveltekit:prefetch
+        data-sveltekit-preload-data
         href="https://www.gitpod.io/blog/gitpod-core-values">core values</a
       >. They represent who we are and are a benchmark for how we serve and work
       with each other.

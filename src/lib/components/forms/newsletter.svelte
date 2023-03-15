@@ -3,7 +3,6 @@
   import Section from "../section.svelte";
   import { trackEvent, trackIdentity } from "../segment.svelte";
   import Button from "../ui-library/button";
-  import Checkbox from "../ui-library/checkbox";
   import Input from "../ui-library/input";
 
   let isSubmittedOnce = false;
@@ -19,11 +18,6 @@
       el: null,
       valid: false,
       value: "",
-    },
-    consent: {
-      el: null,
-      valid: false,
-      checked: false,
     },
   };
 
@@ -70,7 +64,6 @@
     }
     setTimeout(() => {
       formData.email.value = "";
-      formData.consent.checked = false;
     }, 5000);
   }
 </script>
@@ -120,18 +113,13 @@
         </div>
         <div>
           <div>
-            <Checkbox
-              hasError={isFormDirty && !formData.consent.valid}
-              label="<div>I consent to having this website store my submitted information so that Gitpod can respond to my inquiry. By submitting this form I acknowledge that I have read and understood <a class='!underline' href='/privacy'>Gitpod’s Privacy Policy.</a></div>"
-              on:change={() => {
-                formData.consent.valid =
-                  formData.consent.checked &&
-                  formData.consent.el.validity.valid;
-              }}
-              bind:checked={formData.consent.checked}
-              bind:element={formData.consent.el}
-              labelClasses="text-sm max-w-lg"
-            />
+            <p class="text-sm max-w-lg">
+              By submitting this form, I confirm that I acknowledge the
+              collection and processing of personal data by Gitpod, as further
+              described in the <a class="!underline" href="/privacy"
+                >Privacy Policy.</a
+              >
+            </p>
           </div>
           <span />
         </div>

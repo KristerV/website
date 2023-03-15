@@ -108,10 +108,11 @@
           </div>
           <div class="mt-micro">
             <p class="text-xs mb-x-small">
-              I consent to having this website store my submitted information so
-              that the support team can respond to my message. For more
-              information, see our
-              <a class="!underline" href="/privacy"> Privacy Policy. </a>
+              By submitting this form, I confirm that I acknowledge the
+              collection and processing of personal data by Gitpod, as further
+              described in the <a class="!underline" href="/privacy"
+                >Privacy Policy.</a
+              >
             </p>
             <Button
               variant="primary"

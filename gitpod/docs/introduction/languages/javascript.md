@@ -19,7 +19,7 @@ This guide assumes familiarity with:
 
 ## Getting started / Quick Start
 
-`youtube: w65POyu3ZUQ`
+`youtube: ij1msCffQZA`
 
 To see a full working Node/TypeScript application, take a look at [gitpod-samples/template-typescript-node](https://github.com/gitpod-samples/template-typescript-node). To update an existing JavaScript application, follow the steps below in this guide.
 

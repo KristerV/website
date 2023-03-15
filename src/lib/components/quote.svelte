@@ -9,7 +9,7 @@
   const { name, jobTitle } = author || {};
 </script>
 
-<div>
+<div class="max-w-3xl mx-auto">
   <Card
     size="medium"
     class="shadow-normal flex items-start relative text-left md:mx-auto py-x-small px-micro sm:p-small {clazz}"

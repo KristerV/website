@@ -37,7 +37,7 @@
       class="mt-x-small"
       variant="primary"
       size="large"
-      href="https://gitpod.io/workspaces/">Try now</LinkButton
+      href="https://gitpod.io/workspaces/">Start for free</LinkButton
     >
   </div>
   <img

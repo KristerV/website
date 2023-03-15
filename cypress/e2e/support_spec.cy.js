@@ -8,9 +8,6 @@ describe("Test the support contact form", () => {
     cy.findByLabelText(/How can we help you/i)
       .click()
       .type("Gitpod is Awesome!");
-    cy.findByLabelText(
-      "I consent to having this website store my submitted information so that a support staff can respond to my inquiry."
-    ).click({ force: true });
     cy.findByText("Send message").click();
   });
 });

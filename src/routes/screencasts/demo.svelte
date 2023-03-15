@@ -48,7 +48,7 @@
     />
     <p class="mt-x-small md:mb-24">
       Do you still have questions? <a href="/contact/sales?subject=enterprise"
-        >Contact sales.</a
+        >Talk to an expert.</a
       >
     </p>
   </div>
@@ -77,7 +77,7 @@
   contents={{
     secondaryLink: {
       href: "/contact/sales?subject=enterprise",
-      text: "Contact Sales",
+      text: "Talk to an expert",
     },
   }}
 />

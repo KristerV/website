@@ -8,6 +8,10 @@
 
 <div class="flex flex-wrap justify-center mt-small max-w-8xl mx-auto">
   {#each cards as card}
-    <Card {card} class="sm:mx-macro mb-micro 2xl:mb-x-small" {headingLevel} />
+    <Card
+      {card}
+      class="sm:mx-macro mb-micro 2xl:mb-x-small text-center"
+      {headingLevel}
+    />
   {/each}
 </div>

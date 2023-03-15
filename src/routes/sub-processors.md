@@ -14,17 +14,20 @@
 
 </div>
 
-| Processor entity name        | Location                 | Description of processing                                                                          |
-| ---------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------- |
-| Google, LLC                  | United States of America | Cloud computing and storage resources for the duration of the Services Gitpod provides to Customer |
-| Google, LLC                  | United States of America | Business Emails and Collaboration                                                                  |
-| Slack Technologies, LLC      | United States of America | Instant Messaging and Collaboration                                                                |
-| FrontApp, Inc                | United States of America | Platform to handle customer support inquiries and questions                                        |
-| Salesforce, Inc              | United States of America | Customer Relationship Management                                                                   |
-| Twillo, Inc d/b/a Segment.io | United States of America | Customer Data Platform                                                                             |
-| Pearberry Software, Inc      | United States of America | Email service for Account Notifications, Product Updates and Newsletters                           |
-| Twillo, Inc                  | United States of America | Phone number and user account verification service                                                 |
-| Stripe, Inc                  | United States of America | Payment Service                                                                                    |
-| Gong.io, Inc                 | United States of America | Meeting Transcript Service                                                                         |
+| Processor entity name        | Location                 | Description of processing                                                |
+| ---------------------------- | ------------------------ | ------------------------------------------------------------------------ |
+| Google, LLC                  | United States of America | Cloud Infrastructure for gitpod.io                                       |
+| Amazon Web Services, Inc.    | United States of America | Cloud Infrastructure for Gitpod Dedicated                                |
+| Google, LLC                  | United States of America | Business Emails and Collaboration                                        |
+| Slack Technologies, LLC      | United States of America | Instant Messaging and Collaboration                                      |
+| FrontApp, Inc                | United States of America | Platform to handle customer support inquiries and questions              |
+| Salesforce, Inc              | United States of America | Customer Relationship Management                                         |
+| Twillo, Inc d/b/a Segment.io | United States of America | Customer Data Platform                                                   |
+| Pearberry Software, Inc      | United States of America | Email service for Account Notifications, Product Updates and Newsletters |
+| Twillo, Inc                  | United States of America | Phone number and user account verification service                       |
+| Stripe, Inc                  | United States of America | Payment Service                                                          |
+| Gong.io, Inc                 | United States of America | Meeting Transcript Service                                               |
+| Lacework, Inc                | United States of America | Threat Detection Solution                                                |
+| StrongDM, Inc                | United States of America | Access Management Platform                                               |
 
 </div>

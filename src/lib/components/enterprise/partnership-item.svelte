@@ -41,7 +41,7 @@
     {@html partnershipData.title}
   </div>
   <LinkButton
-    sveltekit:prefetch
+    data-sveltekit-preload-data
     href={partnershipData.link.href}
     variant="cta"
     size="medium">{partnershipData.link.text}</LinkButton

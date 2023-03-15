@@ -27,7 +27,9 @@
 >
   <Pill slot="annotation" class="align-top" text="soon" variant="pink" />
 </Header>
-<div class="flex lgx:justify-start items-start mb-xxx-large">
+<div
+  class="flex flex-wrap justify-center lgx:justify-start items-start mb-xxx-large"
+>
   <div class="max-w-2xl justify-left">
     <Hero />
   </div>

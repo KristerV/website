@@ -30,7 +30,7 @@
 <a
   {href}
   {target}
-  sveltekit:prefetch
+  data-sveltekit-preload-data
   class:pointer-events-none={!availability}
   tabindex={!availability && -1}
   class="flex flex-col max-w-sm lg:max-w-none text-left group {!isMostRecent

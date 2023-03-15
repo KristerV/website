@@ -10,6 +10,62 @@ import type {
   FeatureTableToc,
 } from "../components/ui-library/feature-table/feature-table";
 
+import type { Testimonial } from "$lib/types/testimonial";
+
+export const testimonials: Testimonial[] = [
+  {
+    name: "Alejandro Sánchez",
+    avatar: "alejandro-sanchez.jpeg",
+    org: `
+      <span>
+        4GeeksAcademy
+      </span>
+    `,
+    role: "Founder of",
+    text: `
+        <p>
+        We have tested Codespaces thoroughly this week, and it was more complex to configure than Gitpod, it's harder to use for students, and documentation is way worse.
+        </p>
+      `,
+  },
+  /**
+   * Avatar image taken from: https://github.com/soup-bowl
+   * Blog post: https://soupbowl.blog/2023/02/a-year-of-cloud-code-in-review
+   */
+  {
+    name: "Casey LP",
+    avatar: "casey-lp.jpeg",
+    org: `
+    <span>
+     Soupbowl.blog
+     </span>
+    `,
+    role: "DevOps Engineer and Author of",
+    text: `
+      <p>
+      After a year spent with Gitpod and Codespaces, my particular stand out choice is - Gitpod. I've found Gitpod to be more flexible, easier to start with, generally more stable, and comes with a vibrant and helpful community over on Discord.
+      </p>
+    `,
+  },
+  {
+    name: "Tom Preston Werner",
+    avatar: "tom-preston-werner.jpg",
+    org: `<span>
+          GitHub
+        </span>
+        and
+        <span>
+          RedwoodJS
+        </span>`,
+    role: "Creator and Co-founder of",
+    text: `
+      <p>
+      Gitpod totally changed the development velocity for RedwoodJS - it removed any issues related to configurations of dev environments and made it incredibly easy to contribute.
+      </p>
+    `,
+  },
+];
+
 export const codespacesToc: FeatureTableToc[] = [
   {
     type: "text",
@@ -176,6 +232,7 @@ export const codespacesColumn: FeatureTableColumn = {
   isHighlighted: false,
   header: {
     headline: "Codespaces",
+    // @ts-ignore
     image: githubMarkSvelte,
   },
   enteries: [

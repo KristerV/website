@@ -124,7 +124,7 @@
         <div class="flex mb-macro items-center gap-macro">
           {#each tags as tag}
             <a
-              sveltekit:prefetch
+              data-sveltekit-preload-data
               href="/blog?{new URLSearchParams({ tag }).toString()}"
               ><Pill variant="gray" text={tag} /></a
             >

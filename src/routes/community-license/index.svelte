@@ -19,7 +19,6 @@
     licenseFormsQuestions,
     noOfEngineers,
   } from "$lib/contents/contact";
-  import Checkbox from "$lib/components/ui-library/checkbox";
   import { tick } from "svelte";
   import { scrollToElement } from "$lib/utils/helpers";
   import SubmissionSuccess from "$lib/components/submission-success.svelte";
@@ -30,11 +29,6 @@
       el: null,
       valid: false,
       value: "",
-    },
-    consent: {
-      el: null,
-      valid: false,
-      checked: false,
     },
     email: {
       el: null,
@@ -301,24 +295,11 @@
           name="message"
           id="message"
         />
-        <div class="my-4">
-          <Checkbox
-            hasError={isFormDirty && !formData.consent.valid}
-            label="I consent to having this website store my submitted information so that the Gitpod team can respond to my inquiry."
-            bind:checked={formData.consent.checked}
-            bind:element={formData.consent.el}
-            on:change={() => {
-              formData.consent.valid =
-                formData.consent.checked && formData.consent.el.validity.valid;
-            }}
-          />
-        </div>
         <div class="mt-4">
           <p class="text-sm my-4">
-            By submitting this form I acknowledge that I have read and
-            understood <a class="!underline" href="/privacy"
-              >Gitpod’s Privacy Policy.</a
-            >
+            By submitting this form, I confirm that I acknowledge the collection
+            and processing of personal data by Gitpod, as further described in
+            the <a class="!underline" href="/privacy">Privacy Policy.</a>
           </p>
           <Button
             variant="primary"

@@ -9,4 +9,7 @@
     {featureTitles}
     featureTitlePadding="px-macro py-xx-small sm:px-small sm:py-x-small"
   />
+  <div class="text-center mt-xx-small text-base">
+    success metrics reported by customers
+  </div>
 </Section>

@@ -117,7 +117,7 @@
         <DashboardButton />
       {:else}
         <DemoButton
-          class="text-lg h-8 w-28 button flex-shrink-0"
+          class="text-lg h-8 button flex-shrink-0"
           on:click={toggle}
         />
         <LoginButton />

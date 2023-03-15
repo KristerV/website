@@ -285,38 +285,64 @@ body.dark::-webkit-scrollbar-button {
   display: none;
 }
 
-/* Left Menu Items Scrollbar */
-ul::-webkit-scrollbar {
+/* Left Menu Items and Pre tag Scrollbar */
+ul::-webkit-scrollbar,
+div::-webkit-scrollbar,
+pre::-webkit-scrollbar {
   background-color: var(--white);
   width: 12px;
+  height: 12px;
   border-radius: 100px;
 }
 
-ul::-webkit-scrollbar-track {
+ul::-webkit-scrollbar-track,
+div::-webkit-scrollbar-track,
+pre::-webkit-scrollbar-track {
   background-color: var(--white);
   border-radius: 100px;
 }
 
-ul::-webkit-scrollbar-thumb {
+ul::-webkit-scrollbar-thumb,
+div::-webkit-scrollbar-thumb,
+pre::-webkit-scrollbar-thumb {
   background-color: #ece7e5;
   border-radius: 12px;
   border: 2px solid var(--white);
 }
 
-/* Dark Mode of Left Menu Items Scrollbar*/
-.dark ul::-webkit-scrollbar {
-  background-color: var(--slight-grey);
-  width: 12px;
-  border-radius: 100px;
+ul::-webkit-scrollbar-corner,
+pre::-webkit-scrollbar-corner,
+div::-webkit-scrollbar-corner {
+  border-radius: 50%;
 }
 
-.dark ul::-webkit-scrollbar-track {
+/* Dark Mode of Left Menu Items and Pre tag Scrollbar*/
+.dark ul::-webkit-scrollbar,
+.dark div::-webkit-scrollbar,
+.dark pre::-webkit-scrollbar {
   background-color: var(--mid-black);
-  border-radius: 100px;
 }
 
-.dark ul::-webkit-scrollbar-thumb {
+.dark ul::-webkit-scrollbar-track,
+.dark div::-webkit-scrollbar-track,
+.dark pre::-webkit-scrollbar-track {
+  background-color: var(--mid-black);
+}
+
+.dark ul::-webkit-scrollbar-thumb,
+.dark div::-webkit-scrollbar-thumb,
+.dark pre::-webkit-scrollbar-thumb {
   background-color: var(--light-black);
-  border-radius: 12px;
   border: 2px solid var(--mid-black);
+}
+
+.dark ul::-webkit-scrollbar-corner,
+.dark pre::-webkit-scrollbar-corner,
+.dark div::-webkit-scrollbar-corner {
+  border-radius: 50%;
+}
+
+/* CSS adjustment for pre tag */
+pre::-webkit-scrollbar-track {
+  margin: 5px;
 }

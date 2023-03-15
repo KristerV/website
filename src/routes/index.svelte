@@ -18,12 +18,12 @@
   import GetStarted from "$lib/components/index/get-started/index.svelte";
   import OpenGraph from "$lib/components/open-graph.svelte";
   import Section from "$lib/components/section.svelte";
-  import Resources from "$lib/components/resources.svelte";
+  import HomepageResources from "$lib/components/homepage-resources.svelte";
   import AnimatedLogos from "$lib/components/animated-logos.svelte";
-  import UsedBy from "$lib/components/index/used-by.svelte";
   import Titles from "$lib/components/index/titles.svelte";
   import Newsletter from "$lib/components/forms/newsletter.svelte";
   import CommunityCallout from "$lib/components/index/community-callout.svelte";
+  import IntegrateDontDictate from "$lib/components/index/integrate-dont-dictate.svelte";
 </script>
 
 <OpenGraph
@@ -47,25 +47,21 @@
   <link rel="preload" as="image" href="/images/index/rubymine.webp" />
   <link rel="preload" as="image" href="/images/index/vim.webp" />
   <link rel="preload" as="image" href="/images/index/webstorm.webp" />
-  <link
-    rel="preload"
-    as="image"
-    href="/images/index/gitpod-browser-extension.webp"
-  />
+  <link rel="preload" as="image" href="/images/index/rider.webp" />
 </svelte:head>
 
 <Hero />
 <AnimatedLogos />
 <Titles />
+<SectionScreenshot />
 <ChooseProject />
 <div id="choose-project-observer-target-bottom">
   <Features {features} />
 </div>
-<SectionScreenshot />
-<UsedBy title="Used by +750k developers" class="py-small" />
+<IntegrateDontDictate class="py-small" />
 <Features features={otherFeatures} />
 <Section>
-  <Resources {cards} headingLevel="h2" />
+  <HomepageResources {cards} />
 </Section>
 <Testimonials
   title="Trusted by the best developer teams"

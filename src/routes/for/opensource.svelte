@@ -85,7 +85,7 @@
     slot="content"
   >
     {#each cards as card}
-      <CardSmall class="m-macro px-xx-small" {card} />
+      <CardSmall class="m-macro px-xx-small" {card} titleClassNames="h5" />
     {/each}
   </div>
 </SectionCommon>

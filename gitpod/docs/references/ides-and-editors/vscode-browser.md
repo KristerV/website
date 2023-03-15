@@ -21,3 +21,12 @@ VS Code Browser in Gitpod is based on a fork of [VS Code](https://github.com/mic
 ## Settings Sync
 
 By default, all your extensions and other preferences are synced between all of your workspaces on Gitpod. You can read more about over at [Settings Sync](settings-sync).
+
+## Upload Files
+
+You can upload files to your workspace by dragging and dropping them into the editor. You can also upload files by clicking the "Upload" button in the file explorer.
+
+<figure>
+  <video onloadstart="this.playbackRate = 1.5;" controls playsinline autoplay loop muted class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" src="/images/editors/file-upload-ui-button.webm" type="video/webm"></video>
+  <figcaption>Upload Files from local to VS Code Browser</figcaption>
+</figure>

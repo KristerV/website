@@ -80,7 +80,20 @@
         <li><FooterLink href="/guides">Guides</FooterLink></li>
         <li><FooterLink href="/events">Events</FooterLink></li>
       </Section>
-      <Section title="Use Cases">
+      <Section title="Solutions">
+        <li>
+          <FooterLink href="/solutions/collaboration">Collaboration</FooterLink>
+        </li>
+        <li>
+          <FooterLink href="/solutions/onboarding">Onboarding</FooterLink>
+        </li>
+      </Section>
+      <Section title="Industries">
+        <li>
+          <FooterLink href="/for/enterprise" class="flex items-center"
+            >Enterprise</FooterLink
+          >
+        </li>
         <li>
           <FooterLink href="/for/startups" class="flex items-center">
             Startups
@@ -89,11 +102,6 @@
         <li>
           <FooterLink href="/for/opensource" class="flex items-center"
             >Open Source</FooterLink
-          >
-        </li>
-        <li>
-          <FooterLink href="/for/enterprise" class="flex items-center"
-            >Enterprises</FooterLink
           >
         </li>
         <li>
@@ -116,83 +124,79 @@
         <li>
           <FooterLink href="/vs/jetbrains-space">JetBrains Space</FooterLink>
         </li>
-        <!-- <li>
-          <FooterLink href="/vs/coder">Coder</FooterLink>
-        </li> -->
       </Section>
       <Section title="Company">
         <li><FooterLink href="/about">About</FooterLink></li>
         <li><FooterLink href="/about/team">Team</FooterLink></li>
         <li>
-          <FooterLink href="/careers" highlight>Careers</FooterLink>
+          <!-- <FooterLink href="/careers" highlight>Careers</FooterLink> -->
+          <FooterLink href="/careers">Careers</FooterLink>
         </li>
-        <li><FooterLink href="/contact">Contact</FooterLink></li>
         <li><FooterLink href="/media-kit">Media kit</FooterLink></li>
         <li><FooterLink href="/security">Security</FooterLink></li>
-      </Section>
-      <Section title="Legal">
-        <li><FooterLink href="/imprint">Imprint</FooterLink></li>
-        <li>
-          <FooterLink href="/terms">Terms of service</FooterLink>
-        </li>
-        <li>
-          <FooterLink href="/privacy">Privacy policy</FooterLink>
-        </li>
-        <li>
-          <FooterLink href="/cookies">Cookie policy</FooterLink>
-        </li>
-        <li>
-          <button class="text-left" on:click={() => (isModalOpen = true)}
-            >Cookie preferences</button
-          >
-        </li>
+        <li><FooterLink href="/contact">Contact</FooterLink></li>
       </Section>
     </div>
-    <div
-      class="flex flex-col-reverse items-center justify-between border-t border-solid border-divider pt-xx-small md:flex-row md:pt-x-small"
-    >
-      <div class="mt-micro flex flex-col items-center lg:items-start md:mt-0">
-        <div>
-          <div
-            class="border-divider border mb-xx-small inline-flex items-center rounded-lg py-macro gap-macro px-micro"
-          >
-            <img
-              height="30"
-              width="30"
-              alt="soc 2 logo"
-              src="/images/footer/soc-logo.png"
-            />
-            <div>
-              <p class="text-fine-print text-important">SOC 2 Type II</p>
-              <p class="text-fine-print">Certified</p>
-            </div>
+    <div class="border-t border-solid border-divider pt-micro">
+      <div
+        class="flex flex-wrap flex-row sm:flex-row-reverse justify-between mt-micro md:mt-0"
+      >
+        <div class="flex space-x-macro lg:mt-macro">
+          {#each socialLinks as link}
+            <FooterLink
+              href={link.href}
+              target="_blank"
+              class="hover:opacity-80"
+              analytics={`{"variant":"social_media","context":"` +
+                link.alt.toLowerCase() +
+                `_visit"}`}
+            >
+              <img
+                src={link.icon}
+                alt={link.alt}
+                height="24"
+                width="24"
+                class="mx-1 sm:m-2"
+              />
+            </FooterLink>
+          {/each}
+        </div>
+        <div class="mt-0 lg:mt-micro">
+          <ThemeSwitcher />
+        </div>
+        <div
+          class="border-divider border inline-flex items-center rounded-lg py-macro gap-macro px-micro"
+        >
+          <img
+            height="30"
+            width="30"
+            alt="soc 2 logo"
+            src="/images/footer/soc-logo.png"
+          />
+          <div>
+            <p class="text-fine-print text-important">SOC 2 Type II</p>
+            <p class="text-fine-print">Certified</p>
           </div>
         </div>
-        <p>Copyright &copy; {new Date().getFullYear()} Gitpod</p>
       </div>
-      <div class="lg:self-end">
-        <ThemeSwitcher />
+    </div>
+    <div>
+      <div class="flex flex-wrap gap-x-4 gap-y-4 sm:gap-y-0 mt-xx-small w-5/10">
+        <FooterLink href="/imprint">Imprint</FooterLink>
+
+        <FooterLink href="/terms">Terms of service</FooterLink>
+
+        <FooterLink href="/privacy">Privacy policy</FooterLink>
+
+        <FooterLink href="/cookies">Cookie policy</FooterLink>
+
+        <button class="text-left" on:click={() => (isModalOpen = true)}
+          >Cookie preferences</button
+        >
       </div>
-      <div class="flex lg:self-start space-x-macro">
-        {#each socialLinks as link}
-          <FooterLink
-            href={link.href}
-            target="_blank"
-            class="hover:opacity-80"
-            analytics={`{"variant":"social_media","context":"` +
-              link.alt.toLowerCase() +
-              `_visit"}`}
-          >
-            <img
-              src={link.icon}
-              alt={link.alt}
-              height="24"
-              width="24"
-              class="m-2"
-            />
-          </FooterLink>
-        {/each}
-      </div>
+      <p class="mt-9 sm:mt-6">
+        Copyright &copy; {new Date().getFullYear()} Gitpod
+      </p>
     </div>
   </footer>
 </div>

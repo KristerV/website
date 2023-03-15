@@ -19,7 +19,7 @@ This guide assumes familiarity with:
 
 ## Getting started / Quick Start
 
-`youtube: w65POyu3ZUQ`
+`youtube: ij1msCffQZA`
 
 To see a full working Go application, take a look at [gitpod-samples/template-golang-cli](https://github.com/gitpod-samples/template-golang-cli). To update an existing Go application, follow the steps below in this guide.
 

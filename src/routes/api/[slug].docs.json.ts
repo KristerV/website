@@ -27,6 +27,7 @@ export const get: RequestHandler = async ({ params }) => {
     const title = slugToTitle(params.slug);
     const allFiles = import.meta.glob(`/src/routes/docs/**/*.md`, {
       as: "raw",
+      eager: true,
     });
 
     const filePath = resolveFile(

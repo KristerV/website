@@ -21,7 +21,7 @@ To get the most out of ephemeral developer environments, it is important to let 
 
 Tasks are shell scripts that run on top of the Docker image you configure (learn more about [custom Docker images](/docs/configure/workspaces/workspace-image)).
 
-`youtube: fA2fpqP1xaM`
+`youtube: E95oV_iqUtI`
 
 ## Execution order
 
@@ -142,8 +142,7 @@ tasks:
     command: npm run dev
 ```
 
-> **Note**: This doesn't stop execution on errors. If `npm install` in the example above fails, the `npm run configure-database` will still run.  See [how to exit after failure](#immediately-exit-for-any-command-failure-within-a-task) below for a workaround.
-
+> **Note**: This doesn't stop execution on errors. If `npm install` in the example above fails, the `npm run configure-database` will still run. See [how to exit after failure](#immediately-exit-for-any-command-failure-within-a-task) below for a workaround.
 
 ### Wait for commands to complete
 
@@ -193,6 +192,7 @@ tasks:
 ### Immediately exit for any command failure within a task
 
 If you wish to halt an entire task with for an error within the task script, then you could do the following:
+
 ```yaml
 tasks:
   - init: |

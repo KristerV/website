@@ -9,10 +9,10 @@
 
   const {
     title = "Get Started <span>for&nbsp;Free</span>",
-    description = "Spin up fresh cloud development environments for each task, in the cloud, in seconds.",
+    description = "Spin up fresh, automated dev environments for each task, in the cloud, in seconds - no credit card required.",
     note = "",
     link = {
-      text: "Try now",
+      text: "Start for free",
       href: "https://gitpod.io/workspaces",
     },
     secondaryLink = {

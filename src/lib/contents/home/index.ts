@@ -24,7 +24,7 @@ export const gitlab: Brand = {
 export const freeCodeCamp: Brand = {
   alt: "freeCodeCamp",
   logo: FreecodecampLogo,
-  transform: "scale(1.1)",
+  transform: "scale(1.4)",
 };
 
 export const google: Brand = {
@@ -76,16 +76,18 @@ export const codeInstitute: Brand = {
 export const jetbrains: Brand = {
   logo: Jetbrains,
   alt: "JetBrains",
+  transform: "scale(0.95)",
 };
 
 export const fourGeeks: Brand = {
   logo: FourGeeks,
   alt: "Four Geeks",
+  transform: "scale(1.0)",
 };
 
 export const brands: Brand[] = [
   gitlab,
-  freeCodeCamp,
+  jetbrains,
   google,
   factorial,
   dataStax,
@@ -94,6 +96,8 @@ export const brands: Brand[] = [
   astrato,
   redwood,
   codeInstitute,
+  fourGeeks,
+  freeCodeCamp,
 ];
 
 export const logosAnimated: Brand[] = [
@@ -127,6 +131,15 @@ export const projects: Project[] = [
     trackingName: "python",
   },
   {
+    logo: "svg/projects/java.svg",
+    title: "Java",
+    githubUrl: "https://github.com/gitpod-io/spring-petclinic",
+    gitlabUrl: "https://gitlab.com/gitpod/spring-petclinic",
+    bitbucketUrl: "https://bitbucket.org/gitpod/spring-petclinic",
+    alt: "Java",
+    trackingName: "java",
+  },
+  {
     logo: "svg/projects/go.svg",
     title: "Golang",
     githubUrl: "https://github.com/gitpod-io/example-golang-cli",
@@ -141,49 +154,12 @@ export const projects: Project[] = [
     trackingName: "rust",
   },
   {
-    logo: "svg/projects/java.svg",
-    title: "Java",
-    githubUrl: "https://github.com/gitpod-io/spring-petclinic",
-    gitlabUrl: "https://gitlab.com/gitpod/spring-petclinic",
-    bitbucketUrl: "https://bitbucket.org/gitpod/spring-petclinic",
-    alt: "Java",
-    trackingName: "java",
-  },
-  {
     logo: "svg/projects/svelte.svg",
     title: "Svelte",
     githubUrl: "https://github.com/gitpod-io/sveltejs-template",
     alt: "Svelte",
     trackingName: "svelte",
   },
-  // {
-  //   logo: "svg/projects/php.svg",
-  //   title: "PHP & Symfony",
-  //   githubUrl: "https://github.com/gitpod-io/symfony-demo",
-  //   alt: "PHP",
-  // },
-  // {
-  //   logo: "svg/projects/dotnet-core.svg",
-  //   title: ".NET Core",
-  //   githubUrl: "https://github.com/gitpod-io/example-dotnet-core",
-  //   gitlabUrl: "https://gitlab.com/gitpod/dotnetcore",
-  //   bitbucketUrl: "https://bitbucket.org/gitpod/dotnetcore",
-  //   alt: "C#",
-  // },
-  // {
-  //   logo: "python.png",
-  //   title: "Python & Flask",
-  //   githubUrl: "https://github.com/breatheco-de/python-flask-api-tutorial",
-  //   alt: "Python",
-  // },
-  // {
-  //     logo: 'ruby.png',
-  //     title: 'Rails & Postgres',
-  //     githubUrl: "https://github.com/gitpod-io/ruby-on-rails",
-  //     gitlabUrl: "https://gitlab.com/gitpod/rails",
-  //     bitbucketUrl: "https://bitbucket.org/gitpod/ruby-on-rails",
-  //     alt: "Ruby",
-  // },
 ];
 
 export const testimonials: Testimonial[] = [
@@ -200,10 +176,10 @@ export const testimonials: Testimonial[] = [
     role: "Creator and Co-founder of",
     text: `
       <p>
-      Gitpod totally changed the development 
-      velocity for RedwoodJS—it removed any 
-      issues related to configurations of dev 
-      environments and made it incredibly 
+      Gitpod totally changed the development
+      velocity for RedwoodJS—it removed any
+      issues related to configurations of dev
+      environments and made it incredibly
       easy to contribute.
       </p>
     `,
@@ -217,8 +193,8 @@ export const testimonials: Testimonial[] = [
     role: "Former Chief Architect of",
     text: `
     <p>
-    Gitpod is the most exciting developer tool 
-    I have encountered since, I don’t know, 
+    Gitpod is the most exciting developer tool
+    I have encountered since, I don’t know,
     telnet maybe? Unix? It’s been a while.
     </p>
       `,
@@ -235,9 +211,9 @@ export const testimonials: Testimonial[] = [
     role: "CEO at",
     text: `
         <p>
-        Through our partnership with Gitpod, we 
-        are enabling our mutual users to accelerate 
-        productivity, save resources and time while 
+        Through our partnership with Gitpod, we
+        are enabling our mutual users to accelerate
+        productivity, save resources and time while
         strengthening security compliance
         </p>
       `,
@@ -253,8 +229,8 @@ export const testimonials: Testimonial[] = [
     role: "CTO at",
     text: `
           <p>
-          Gitpod easily saves every engineer half a 
-          day per week. The amount of productivity 
+          Gitpod easily saves every engineer half a
+          day per week. The amount of productivity
           we gain is staggering.
           </p>
       `,
@@ -270,8 +246,8 @@ export const testimonials: Testimonial[] = [
     role: "Director of Developer Experience at",
     text: `
       <p>
-      I’d estimate each engineer saves 5 to 10 
-      hours a month on dev environment 
+      I’d estimate each engineer saves 5 to 10
+      hours a month on dev environment
       issues that just don’t exist with Gitpod.
       </p>
     `,
@@ -287,7 +263,7 @@ export const testimonials: Testimonial[] = [
     role: "CTO at",
     text: `
       <p>
-      The ability for QAs to easily test a branch 
+      The ability for QAs to easily test a branch
       resulted in 20% fewer hotfixes after releases.
       </p>
     `,
@@ -304,7 +280,7 @@ export const testimonials: Testimonial[] = [
     role: "Founder of",
     text: `
         <p>
-        I would rather shut down the academy 
+        I would rather shut down the academy
         than stop using Gitpod.
         </p>
       `,
@@ -389,6 +365,24 @@ export const ides: Ide[] = [
     icon: "webstorm.svg",
   },
   {
+    name: "clion",
+    availibility: "beta",
+    label: "CLion",
+    screenshots: {
+      desktop: "clion.webp",
+    },
+    icon: "clion.svg",
+  },
+  {
+    name: "rider",
+    availibility: "beta",
+    label: "Rider",
+    screenshots: {
+      desktop: "rider.webp",
+    },
+    icon: "rider.svg",
+  },
+  {
     name: "vim",
     label: "Vim",
     screenshots: {
@@ -400,19 +394,19 @@ export const ides: Ide[] = [
 
 export const featureTitles: FeatureTitle[] = [
   {
+    main: "<5 min",
+    sub: "onboarding time for new developers",
+  },
+  {
+    main: "40%",
+    sub: "fewer issues across dev lifecycle",
+  },
+  {
     main: "5h",
-    sub: "weekly productivity gain per engineer",
+    sub: "productivity gain per week per developer",
   },
   {
-    main: "4x",
-    sub: "faster time from zero to first PR",
-  },
-  {
-    main: "100%",
-    sub: "of code runs in a secure CDE",
-  },
-  {
-    main: "+750k",
-    sub: "developers are using Gitpod",
+    main: "45%",
+    sub: "improvement in developer happiness",
   },
 ];

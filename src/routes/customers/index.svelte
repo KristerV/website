@@ -51,7 +51,7 @@
   }}
   btnSecondary={{
     href: "/contact/sales?subject=enterprise",
-    text: "Contact sales",
+    text: "Talk to an expert",
   }}
 />
 

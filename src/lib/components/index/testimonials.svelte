@@ -39,25 +39,33 @@
         </p>
       {/if}
     </div>
-
-    <Carousel bind:currentID>
-      {#each testimonials as testimonial, index}
-        <Testimonial id={getItemId(index)} {testimonial} />
-      {/each}
-    </Carousel>
-    <div class="flex mt-micro justify-center space-x-micro">
-      {#each sequence as number}
-        <button
-          on:click={() => {
-            activeSequenceNumber = number;
-            scrollIntoView(`#${getItemId(number)}`);
-          }}
-          title="Carousel item"
-          class="inline-block h-[15px] w-[15px] {number === activeSequenceNumber
-            ? 'bg-light-grey dark:bg-body'
-            : 'bg-divider dark:bg-light-black'}  rounded-full transition-all duration-200"
-        />
-      {/each}
-    </div>
+    {#if testimonials.length <= 3}
+      <div class="flex flex-wrap justify-center space-x-micro">
+        {#each testimonials as testimonial, index}
+          <Testimonial id={getItemId(index)} {testimonial} />
+        {/each}
+      </div>
+    {:else}
+      <Carousel bind:currentID>
+        {#each testimonials as testimonial, index}
+          <Testimonial id={getItemId(index)} {testimonial} />
+        {/each}
+      </Carousel>
+      <div class="flex mt-micro justify-center space-x-micro">
+        {#each sequence as number}
+          <button
+            on:click={() => {
+              activeSequenceNumber = number;
+              scrollIntoView(`#${getItemId(number)}`);
+            }}
+            title="Carousel item"
+            class="inline-block h-[15px] w-[15px] {number ===
+            activeSequenceNumber
+              ? 'bg-light-grey dark:bg-body'
+              : 'bg-divider dark:bg-light-black'}  rounded-full transition-all duration-200"
+          />
+        {/each}
+      </div>
+    {/if}
   </div>
 </Section>

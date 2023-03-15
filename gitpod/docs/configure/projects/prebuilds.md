@@ -24,7 +24,7 @@ data={{
 
 Prebuilds reduce wait time, by installing dependencies or running builds **before** you start a new workspace.
 
-`youtube: ZtlJ0PakUHQ`
+`youtube: DwkoOz1GSVg`
 
 ## .gitpod.yml
 
@@ -40,6 +40,15 @@ tasks:
       npm start
 ```
 
+## Enable prebuilds on your repository project
+
+Use the following steps to enable prebuilds on your repository:
+
+- [Create a project](/docs/configure/projects/prebuilds#projects-and-prebuilds) for the repository.
+- Define the prebuild steps in an init [task](https://www.gitpod.io/docs/configure/workspaces/tasks) in your [gitpod.yml](https://www.gitpod.io/docs/references/gitpod-yml).
+
+Since prebuilds are included in all our metered [pay-as-you-go](https://www.gitpod.io/docs/configure/billing) plans, configuring prebuild settings in your project should help with managing prebuild usage.
+
 ## Projects and prebuilds
 
 For prebuilds to run automatically, you also need a [project](/docs/configure#projects) for your repository.
@@ -47,9 +56,40 @@ For prebuilds to run automatically, you also need a [project](/docs/configure#pr
 To create a new project:
 
 - Click on _New Project_ in the Projects page of one your organizations.
+<figure>
+<video onloadstart="this.playbackRate = 1.5;" controls playsinline autoplay loop muted class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="ARepl extension example" src="/images/docs/projects/prebuilds.webm" type="video/webm"></video>
+    <figcaption>Create a new project in one of your organizations to enable prebuilds</figcaption>
+</figure>
+
 - If necessary, you will be prompted for additional authorization to install and configure the Gitpod GitHub app,
   so that Gitpod can watch your repositories and trigger prebuilds.
 - Select the repository for your project.
+
+### View prebuilds
+
+You can find a list of recent prebuilds under the **Prebuilds** tab for your project.
+
+![Recent prebuilds list for an example project](/images/docs/projects/prebuild-dashboard.webp)
+
+From here, you may also trigger a new prebuild based on the last commit in the project. Selecting a prebuild will open the details page showing the current status as well as additional logs. From the prebuild details page, you may rerun the selected prebuild or start a new workspace based on it.
+
+### Rerun a prebuild
+
+Prebuilds can be triggered again which can be particularly useful when debugging an unexpected failure.
+
+To rerun a prebuild:
+
+1. Navigate to your project and select the **Prebuilds** tab.
+2. Select the prebuild you wish to rerun.
+3. Select **Rerun Prebuild**.
+
+### Start workspace based on existing prebuild
+
+To start a workspace using an existing prebuild:
+
+1. Navigate to your project and select the **Prebuilds** tab.
+2. Select the prebuild you wish to start a workspace on top of.
+3. Select **New Workspace (with this prebuild)**.
 
 ## Prebuilds are shared
 
@@ -74,7 +114,7 @@ Environment variables which are defined in project settings will be visible in p
 **WARNING**
 Care should be taken with secrets in prebuilds. Do not save secrets in a way which could leak into workspaces. This especially true for public repositories.
 
-## Configuring prebuilds manually.
+## Configuring prebuilds manually
 
 All prebuilds require a [Gitpod project](/docs/configure/projects#add-a-new-project) for the repository.
 

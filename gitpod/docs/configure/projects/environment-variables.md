@@ -151,10 +151,10 @@ tasks:
     command: |
       # Example for referring to the existing system variables
       export API_URL="$HOSTNAME"
-      
+
       # Print out the environment variable
       echo "$API_URL"
-      
+
       yarn start
 
   - name: Example of updating PATH environment variable inside a task shell
@@ -162,10 +162,10 @@ tasks:
       # Download and install `fzf` binary to ~/.local/bin/
       mkdir -p ~/.local/bin
       curl -sL "https://github.com/junegunn/fzf/releases/download/0.35.1/fzf-0.35.1-linux_amd64.tar.gz" | tar -C ~/.local/bin -xpz
-      
+
       # Update PATH variable
       export PATH="$HOME/.local/bin:$PATH"
-      
+
       # Now `fzf` can be called without full path from the task shell
       ls / | fzf
 ```

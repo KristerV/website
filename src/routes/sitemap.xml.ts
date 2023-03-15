@@ -4,7 +4,7 @@ import { removeTrailingSlash } from "$lib/utils/helpers";
 export const get: RequestHandler = async () => {
   const website = "https://www.gitpod.io";
   const staticPages = Object.keys(
-    import.meta.globEager("/src/routes/**/!(_)*.{svelte,md}")
+    import.meta.glob("/src/routes/**/!(_)*.{svelte,md}", { eager: true })
   )
     .filter((page) => {
       const filters = [

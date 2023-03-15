@@ -9,7 +9,7 @@
   };
 </script>
 
-<a sveltekit:prefetch class="no-underline" href={webinar.href}>
+<a data-sveltekit-preload-data class="no-underline" href={webinar.href}>
   <Card
     size="small"
     class="p-xx-small hover:shadow-normal transition-all duration-200 delay-[50ms] flex flex-col overflow-hidden w-full h-full max-w-sm"

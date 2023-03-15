@@ -6,7 +6,7 @@
 
 <LinkButton
   class="{clazz} flex items-center justify-center"
-  href="/contact/sales?subject=Enterprise"
+  href="/contact/get-demo"
   variant="tertiary"
-  size="medium">Contact sales</LinkButton
+  size="medium">Get a demo</LinkButton
 >

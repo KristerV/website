@@ -55,7 +55,7 @@
     {className}
     {disabled ? classMap.disabled : ''}
   "
-  sveltekit:prefetch={isPrefetchable}
+  data-sveltekit-preload-data={isPrefetchable}
   class:text-center={textAlign === "center"}
   class:text-left={textAlign === "left"}
   target={href.includes("https://") ? "_blank" : ""}

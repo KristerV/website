@@ -12,7 +12,7 @@ title: Collaboration & Sharing of Gitpod workspaces
 
 There are currently two ways to share a Gitpod workspace, either by creating a [workspace snapshot](#sharing-snapshots), a "point in time" capture of a workspace state that can be then opened by another user. Or, by [sharing a running workspace](#sharing-running-workspaces) which shares access to a single running workspace to multiple users.
 
-`youtube: TrY15zN98p8`
+`youtube: HcKlXfKpolM`
 
 ## Workspace Snapshots
 

@@ -7,14 +7,22 @@ import GitProviders from "../components/svgs/enterprise/git-providers.svelte";
 import { linuxSource } from "./terminal";
 import Jetbrains from "$lib/components/svgs/brands/jetbrains.svelte";
 import type { Quote } from "$lib/types/quote";
-import { factorialQuote, sharesIoQuote, vizlibQuote } from "./customers";
+import {
+  quizletQuote,
+  factorialQuote,
+  sharesIoQuote,
+  vizlibQuote,
+} from "./customers";
 import { jetbrainsQuote } from "./jetbrains-space";
 
 export const exploreContents: ExploreSection = {
-  title: "Get demo",
+  title: "Talk to an expert",
   description:
     "Spin up fresh cloud development environments for each task, in the cloud, in seconds",
-  link: { text: "Contact sales", href: "/contact/sales?subject=enterprise" },
+  link: {
+    text: "Talk to an expert",
+    href: "/contact/sales?subject=enterprise",
+  },
   useKumquatIllustration: false,
 };
 
@@ -51,6 +59,54 @@ export const featureCards: {
       link: {
         href: "/dedicated",
         text: "Request early access",
+      },
+    },
+  },
+];
+
+// Using on self-hosted page
+
+export const dedicatedCards: {
+  card: Card;
+  pill?: { text: string; variant: "pink" | "orange" | "gray" | "violet" };
+}[] = [
+  {
+    card: {
+      title: "Private connections",
+      text: "Set up private connections to your dev resources",
+      icon: {
+        src: "/svg/icons/secure.svg",
+        alt: "Secure Icon",
+      },
+    },
+  },
+  {
+    card: {
+      title: "Region of choice",
+      text: "Deploy your dedicated instance in your region of choice",
+      icon: {
+        src: "/svg/icons/cloud.svg",
+        alt: "Cloud Icon",
+      },
+    },
+  },
+  {
+    card: {
+      title: "Faster Gitpod",
+      text: "Get faster startup times and lower latency",
+      icon: {
+        src: "/svg/icons/clock.svg",
+        alt: "Clock Icon",
+      },
+    },
+  },
+  {
+    card: {
+      title: "Fully compliant",
+      text: "Comply with local data residency requirements",
+      icon: {
+        src: "/svg/icons/lock.svg",
+        alt: "Lock Icon",
       },
     },
   },
@@ -168,6 +224,7 @@ export const otherFeatures: Feature[] = [
 ];
 
 export const quotes: Quote[] = [
+  quizletQuote,
   factorialQuote,
   jetbrainsQuote,
   sharesIoQuote,

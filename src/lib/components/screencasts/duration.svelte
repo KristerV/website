@@ -13,6 +13,6 @@
   });
 </script>
 
-<time class="text-body {clazz}">
+<time class="text-important {clazz}">
   Duration: {screencastDurationMinutes}m {screencastDurationSeconds}s
 </time>

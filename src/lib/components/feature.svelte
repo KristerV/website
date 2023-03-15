@@ -8,6 +8,9 @@
   import Lottie from "./lottie.svelte";
   import TickList from "./tick-list.svelte";
 
+  let clazz = "";
+  export { clazz as class };
+
   export let feature: Feature;
   const {
     moreButton,
@@ -50,7 +53,7 @@
   }
 </style>
 
-<Section class="feature-container-section">
+<Section class="feature-container-section {clazz}">
   <div
     class="feature md:grid justify-center items-center md:grid-cols-2 lg:gap-32 md:gap-small flex {showTheMediaFirstOnMobile
       ? 'flex-col-reverse'

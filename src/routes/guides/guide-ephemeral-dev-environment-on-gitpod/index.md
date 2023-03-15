@@ -56,7 +56,7 @@ You can read more about `.gitpod.yml` in [docs: config gitpod file](https://www.
 
 ### Setting up your first `.gitpod.yml` ⚡️
 
-`youtube: fA2fpqP1xaM `
+`youtube: E95oV_iqUtI `
 
 1. Open your repo in a new Gitpod workspace. The simplest way is by appending the entire repo URL (including the protocol) to `gitpod.io/#`, e.g. `gitpod.io/#https://github.com/gitpod-io/gitpod`
 2. Create a `.gitpod.yml` in the root directory of your project, e.g. `touch .gitpod.yml`
@@ -191,6 +191,7 @@ Inside your workspace, Open the terminal & run the following steps:
 - Step 1: `mkdir -p /workspace/.persist`
 - Step 2: `cp $HOME/.bash_history /workspace/.persist`
 - Step 3: Add the following task inside `.gitpod.yml`:
+
 ```yaml
 tasks:
   - name: Restore persist
@@ -199,6 +200,7 @@ tasks:
       # Copy more files as necessary below
       exit;
 ```
+
 - Step 4: [See it in action](https://www.gitpod.io/docs/config-gitpod-file#see-it-in-action)
 
 > **Note**: This is just a temporary solution. The issue for this is still open [Issue URL](https://github.com/gitpod-io/gitpod/issues/8716)

@@ -4,17 +4,20 @@
   import Logo from "../svgs/logo.svelte";
 
   export let screencast: Screencast;
-  export let screencastNumber: number;
   export let headlineOrder: "h3" | "" = "";
-
-  $: screencastNumberPadded = `${screencastNumber}`.padStart(3, "0");
 </script>
 
 <style lang="postcss">
   .cast {
     padding-right: 40%;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08),
-      0px 5px 20px rgba(0, 0, 0, 0.12);
+    background: linear-gradient(
+      205.82deg,
+      var(--white) 11.31%,
+      var(--sand-dark) 83.69%
+    );
+  }
+  :global(body.dark) .cast {
+    background: linear-gradient(205.82deg, #332d23 11.31%, #0f0e0b 83.69%);
   }
   .cast:hover::after,
   .cast:hover::before,
@@ -45,10 +48,9 @@
   }
   .cast > div::after {
     content: "";
-    @apply -z-10 absolute right-0 top-2 bottom-2 pointer-events-none;
-    background-image: url("/images/screencasts/gitpod-editor.png");
+    @apply -z-10 absolute right-0 top-8 bottom-8 pointer-events-none;
+    background-image: url("/images/index/vscode-desktop.webp");
     border-radius: 0.25rem;
-    filter: drop-shadow(-2px 2px 5px rgba(0, 0, 0, 0.2));
     background-size: auto 100%;
     width: 150px;
 
@@ -61,22 +63,17 @@
 <a
   href={screencast.href ||
     `/screencasts/${stringToBeautifiedFragment(screencast.title.slice(0, -3))}`}
-  class="cast relative dark:bg-card flex flex-col flex-nowrap min-w-full text-left mb-micro py-micro pl-x-small z-10 rounded-xl bg-right h-56"
+  class="cast relative flex flex-col flex-nowrap min-w-full text-left mb-micro py-micro pl-x-small z-10 rounded-t-2xl bg-right h-56"
   data-analytics={`{"variant":"preview"}`}
 >
   <div class="flex flex-col h-full">
-    <data class="text-body font-bold mb-macro">
-      {#if screencast.previewText}
-        {screencast.previewText}
+    <Logo height="40" width="56" />
+    <div class="flex justify-center">
+      {#if headlineOrder === "h3"}
+        <h3 class="h2 py-8">{screencast.title}</h3>
       {:else}
-        Screencast {screencastNumberPadded}
+        <h2 class="py-8">{screencast.title}</h2>
       {/if}
-    </data>
-    {#if headlineOrder === "h3"}
-      <h3 class="h2">{screencast.title}</h3>
-    {:else}
-      <h2>{screencast.title}</h2>
-    {/if}
-    <Logo height="40" width="82" />
+    </div>
   </div>
 </a>

@@ -20,7 +20,7 @@ export const get: import("@sveltejs/kit").RequestHandler = async ({
     : (locals.changelogEntries as ChangelogEntryType[]).find((e) => {
         return !e.tag || e.tag.indexOf("self-hosted") == -1;
       }).fileName;
-  const body = changelogEntries[fileName];
+  const body = await changelogEntries[fileName]();
   if (!body) {
     return {
       status: 404,

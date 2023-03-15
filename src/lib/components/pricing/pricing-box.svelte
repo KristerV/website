@@ -33,10 +33,6 @@
     @apply bg-white;
   }
 
-  :global(body.dark) :global(.plan) {
-    @apply dark:bg-bg;
-  }
-
   :global(.crossed-out) {
     @apply line-through;
   }

@@ -7,7 +7,6 @@
   import { scrollToElement } from "$lib/utils/helpers";
   import { tick } from "svelte";
   import Button from "$lib/components/ui-library/button/button.svelte";
-  import Checkbox from "$lib/components/ui-library/checkbox/checkbox.svelte";
   import SubmissionSuccess from "$lib/components/submission-success.svelte";
   import Wrapper from "$lib/components/webinars/wrapper.svelte";
   import { goto } from "$app/navigation";
@@ -34,11 +33,6 @@
       el: null,
       valid: false,
       value: "",
-    },
-    consent: {
-      el: null,
-      valid: false,
-      checked: false,
     },
   };
 
@@ -163,17 +157,11 @@
           </div>
         </InputsHalf>
         <div>
-          <Checkbox
-            hasError={isFormDirty && !formData.consent.valid}
-            label="<p>I consent to having this website store my submitted information. <a class='!underline' href='/privacy'>More on privacy policy</a></p>"
-            bind:checked={formData.consent.checked}
-            bind:element={formData.consent.el}
-            on:change={() => {
-              formData.consent.valid =
-                formData.consent.checked && formData.consent.el.validity.valid;
-            }}
-            textClassName="text-sm"
-          />
+          <p class="text-sm max-w-lg">
+            By submitting this form, I confirm that I acknowledge the collection
+            and processing of personal data by Gitpod, as further described in
+            the <a class="!underline" href="/privacy">Privacy Policy.</a>
+          </p>
         </div>
         <Button
           class="flex gap-micro"

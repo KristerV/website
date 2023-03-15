@@ -30,7 +30,7 @@
     <span class="flex-1 text-right">🎊</span>
     <p class="flex-2 px-4 md:px-2 font-normal">
       Gitpod Dedicated: the self-hosted alternative for large teams |
-      <a href="/dedicated" sveltekit:prefetch on:click={closeBanner}
+      <a href="/dedicated" data-sveltekit-preload-data on:click={closeBanner}
         >Request early access
       </a>
     </p>

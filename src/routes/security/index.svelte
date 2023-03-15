@@ -3,15 +3,12 @@
 </script>
 
 <script lang="ts">
-  import Secure from "$lib/components/security/secure.svelte";
   import Program from "$lib/components/security/program.svelte";
-  import CallToAction from "$lib/components/security/call-to-action.svelte";
-  import Report from "$lib/components/security/report.svelte";
   import OpenGraph from "$lib/components/open-graph.svelte";
   import UsedBy from "$lib/components/index/used-by.svelte";
   import Header from "$lib/components/header.svelte";
   import LinkButton from "$lib/components/ui-library/link-button";
-  import Transparency from "$lib/components/security/transparency-is-key.svelte";
+  import ThanksSupport from "$lib/components/security/thanks-support.svelte";
 </script>
 
 <OpenGraph
@@ -29,33 +26,27 @@
   textClassNames="text-large max-w-2xl mx-auto mb-x-small"
   tight={true}
 >
-  <div slot="content">
-    <LinkButton variant="primary" size="medium" href="#program"
-      >View security program</LinkButton
-    >
+  <div
+    slot="content"
+    class="flex flex-wrap space-x-2 sm:space-x-8 justify-center m-auto text-center"
+  >
     <LinkButton
       variant="primary"
-      size="medium"
-      href="/docs/references/security/faq">View security faq</LinkButton
+      size="large"
+      href="#program"
+      class="mt-2 sm:mt-0">View security program</LinkButton
     >
     <LinkButton
-      variant="primary"
-      size="medium"
+      variant="cta"
+      size="large"
       href="https://app.safebase.io/portal/71ccd717-aa2d-4a1e-942e-c768d37e9e0c/preview?product=default"
-      >View trust center</LinkButton
+      class="mt-2 sm:mt-0">View trust center</LinkButton
     >
   </div>
 </Header>
 
-<UsedBy
-  title="Trusted by developer led companies"
-  class="py-small"
-  style="margin-top: 0"
-/>
-<Secure />
-<Transparency />
+<UsedBy title="Used by +750k developers" class="py-small" />
 <div id="program">
   <Program />
 </div>
-<CallToAction />
-<Report />
+<ThanksSupport />

@@ -30,7 +30,7 @@ In this guide we'll walk you through the basics to get up and running with Gitpo
 
 ## Step 1: Your first workspace
 
-`youtube: w65POyu3ZUQ`
+`youtube: ij1msCffQZA`
 
 The best way to get see the power of Gitpod, is to try it out by starting your first [Workspace](/docs/configure/workspaces).
 
@@ -40,8 +40,6 @@ To start your first workspace:
 
 1. Navigate to a GitHub, GitLab or Bitbucket repository.
 2. Open the repo in Gitpod by prefixing the URL with: `gitpod.io/#`
-
-<!-- TODO: Is this the "best" Gitpod example we have? -->
 
 For example, click this link to open the NodeJS project in a Gitpod workspace:
 

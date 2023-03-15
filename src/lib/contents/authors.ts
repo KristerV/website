@@ -29,6 +29,14 @@ export const authors: { [idx: string]: Author } = {
     },
     description: "",
   },
+  burningion: {
+    name: "Kirk Kaiser",
+    socialProfiles: {
+      twitter: "burningion",
+      github: "burningion",
+    },
+    description: "Head of Developer Relations at Gitpod",
+  },
   meysholdt: {
     name: "Moritz Eysholdt",
     socialProfiles: {

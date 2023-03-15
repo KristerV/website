@@ -10,52 +10,52 @@ export const secureParagraphs = [
 
 export const programFeatures: Card[] = [
   {
-    title: "Compliance",
-    text: '<p>Gitpod maintains compliance with the European General Data Protection Regulation (GDPR) and provides users with the ability to access and control the information that is collected about them. To clients we provide a Data Processing Agreement (DPA) incorporating the Standard Contractual Clauses (SCC) for International Data Transfers. </p><p> Gitpod is built with security in mind. We continuously invest in security best practices and conduct annual SOC 2 Type II audits to assess the appropriateness of our controls. You can request a copy of our report inside our public <a href="https://app.safebase.io/portal/71ccd717-aa2d-4a1e-942e-c768d37e9e0c/preview?productId=default" target="_blank" rel="noreferrer">Trust Center</a> (NDA required).</p>',
-    icon: {
-      src: "/svg/security/compliance.svg",
-    },
-    transform: "scale(1.5) translateY(.2rem)",
-  },
-  {
-    title: "Environment Isolation",
-    text: '<p>Each Gitpod workspace or prebuild runs on a secured single-use container providing fast startup times without compromising on security</p><p>We create separate user, PID, mount and network namespaces for each Gitpod workspace, and establish an unprivileged node user as root within that user namespace. More details on the technical approach can be found <a href="https://www.youtube.com/watch?v=iYLCHQgj0fE" target="_blank" rel="noreferrer">in this talk</a> as well as in this <a href="https://kinvolk.io/blog/2020/12/improving-kubernetes-and-container-security-with-user-namespaces/"  rel="noreferrer" target="_blank">blog post</a> from the container security experts at Kinvolk who stress-tested our namespace layering implementation.</p>',
-    icon: {
-      src: "/svg/icons/secure.svg",
-      alt: "Chat",
-    },
-    transform: "scale(.8)",
-  },
-  {
-    title: "Open source",
-    text: '<p>Built-in the open, our source code and how Gitpod is developed are publicly available for review by everyone. Our security posture, disclosure policy and speed in vulnerability handling is highlighted in the following <a href="https://about.gitlab.com/blog/2021/07/08/two-bugs-and-a-quick-fix-in-gitpod/" rel="noreferrer" target="_blank">blog post</a> from the security research team at GitLab.</p><p>In addition to this, we acknowledge the importance of giving back to the community and have taken steps to support the software supply chain of Gitpod and our customers through the creation of a monetary fund for supporting open-source maintainers.</p>',
-    icon: {
-      src: "/svg/icons/team.svg",
-      alt: "Open source",
-    },
-  },
-  {
-    title: "Authentication and Authorization",
-    text: "<p>Gitpod uses your Git provider's SSO and, by default, all workspaces connections are private and authenticated, making them accessible only by the creator.</p><p>Prebuild logs are readable by all members of the corresponding team and no one else.</p>",
+    title: "Security operations",
+    text: "<p>Gitpod is a key part of our customers’ software development life cycle.  A top company priority is securing its product, people and systems.</p>",
     icon: {
       src: "/svg/icons/lock.svg",
-      alt: "Authentication and Authorization",
+      alt: "Secure Lock",
     },
+    link: {
+      href: "https://app.safebase.io/portal/71ccd717-aa2d-4a1e-942e-c768d37e9e0c/preview?product=default",
+      text: "View trust center",
+    },
+    transform: "scale(.8) translateX(-.7rem)",
   },
   {
-    title: "Encryption",
-    text: "<p>All data, including workspace backups and environment variables, is encrypted at rest using AES256; and all connections to the Gitpod app, website, workspaces and workspaces' endpoints are encrypted in transit (TLS).</p>",
+    title: "Product security",
+    text: "<p>The platform was developed with security front and center, including how it’s built and deployed.</p>",
     icon: {
-      src: "/svg/icons/file.svg",
+      src: "/svg/icons/secure.svg",
+      alt: "Secure",
     },
+    link: {
+      href: "/docs/references/security/faq",
+      text: "View security FAQ",
+    },
+    transform: "scale(.8) translateX(-.7rem)",
   },
   {
-    title: "Provenance",
-    text: "<p> Gitpod generates SLSA level 1 compliant provenance. Starting with this level, build systems are required to keep a record of their involvement, which sources went into the build process, and which process was used. All this data is recorded using in-toto attestations and published alongside the actual build artifacts.</p>",
+    title: "Compliance",
+    text: "<p>Gitpod is SOC 2 Type II compliant and conducts pentesting at least annually. The company is also GDPR compliant.</p>",
     icon: {
-      src: "/svg/security/provenance.svg",
+      src: "/svg/security/compliance.svg",
+      alt: "SOC 2 & GDPR Compliance",
     },
-    transform: "scale(1.5) translateY(.2rem)",
+    transform: "scale(1.5) translateY(.2rem) translateX(.5rem)",
+  },
+  {
+    title: "Vulnerability disclosure",
+    text: '<p>Gitpod gratefully welcomes feedback from users, researchers and the general public. Report concerns <a href="/contact/support?subject=security">here</a>.</p>',
+    icon: {
+      src: "/svg/icons/chat.svg",
+      alt: "chat",
+    },
+    link: {
+      href: "/security/report",
+      text: "See Disclosure Policy",
+    },
+    transform: "scale(.7) translateX(-.7rem)",
   },
 ];
 

@@ -390,7 +390,6 @@ curl 'https://api.gitpod.io/gitpod.experimental.v1.TeamsService/CreateTeam' \
   "team": {
     "id": "<TEAM_ID>",
     "name": "<TEAM_NAME>",
-    "slug": "<team-slug>",
     "members": [
       {
         "userId": "<USER_ID>",
@@ -422,13 +421,12 @@ curl 'https://api.gitpod.io/gitpod.experimental.v1.TeamsService/CreateTeam' \
 
 **Response Parameters**:
 
-|   Parameter    |         Description          |  Type  |
-| :------------: | :--------------------------: | :----: |
-|      `id`      |         UUID of Team         | string |
-|     `name`     |         Name of team         | string |
-| `creationTime` |    Creation time of team     | string |
-|     `slug`     | Short version of a Team name | string |
-|   `members`    |  List of members in a team   | array  |
+|   Parameter    |        Description        |  Type  |
+| :------------: | :-----------------------: | :----: |
+|      `id`      |       UUID of Team        | string |
+|     `name`     |       Name of team        | string |
+| `creationTime` |   Creation time of team   | string |
+|   `members`    | List of members in a team | array  |
 
 ### Get a team
 
@@ -480,7 +478,6 @@ func ExampleGetTeam() {
   "team": {
     "id": "<TEAM_ID>",
     "name": "<TEAM_NAME>",
-    "slug": "<team-slug>",
     "members": [
       {
         "userId": "<USER_ID>",
@@ -518,13 +515,12 @@ func ExampleGetTeam() {
 
 **Response Parameters**:
 
-|   Parameter    |         Description          |  Type  |
-| :------------: | :--------------------------: | :----: |
-|      `id`      |         UUID of Team         | string |
-|     `name`     |         Name of team         | string |
-| `creationTime` |    Creation time of team     | string |
-|     `slug`     | Short version of a Team name | string |
-|   `members`    |  List of members in a team   | array  |
+|   Parameter    |        Description        |  Type  |
+| :------------: | :-----------------------: | :----: |
+|      `id`      |       UUID of Team        | string |
+|     `name`     |       Name of team        | string |
+| `creationTime` |   Creation time of team   | string |
+|   `members`    | List of members in a team | array  |
 
 ### List all teams
 
@@ -575,7 +571,6 @@ func ExampleListTeams() {
     {
       "id": "<TEAM_ID>",
       "name": "<TEAM_NAME>",
-      "slug": "<team-slug>",
       "members": [
         {
           "userId": "<USER_ID>",
@@ -591,7 +586,6 @@ func ExampleListTeams() {
     {
       "id": "<TEAM_ID>",
       "name": "<TEAM_NAME>",
-      "slug": "<team-slug>",
       "members": [
         {
           "userId": "<USER_ID>",
@@ -651,7 +645,6 @@ curl 'https://api.gitpod.io/gitpod.experimental.v1.TeamsService/JoinTeam' \
   "team": {
     "id": "<TEAM_ID>",
     "name": "<TEAM_NAME>",
-    "slug": "<team-slug>",
     "members": [
       {
         "userId": "<USER_ID>",
@@ -683,13 +676,12 @@ curl 'https://api.gitpod.io/gitpod.experimental.v1.TeamsService/JoinTeam' \
 
 **Response Parameters**:
 
-|   Parameter    |         Description          |  Type  |
-| :------------: | :--------------------------: | :----: |
-|      `id`      |         UUID of Team         | string |
-|     `name`     |         Name of team         | string |
-| `creationTime` |    Creation time of team     | string |
-|     `slug`     | Short version of a Team name | string |
-|   `members`    |  List of members in a team   | array  |
+|   Parameter    |        Description        |  Type  |
+| :------------: | :-----------------------: | :----: |
+|      `id`      |       UUID of Team        | string |
+|     `name`     |       Name of team        | string |
+| `creationTime` |   Creation time of team   | string |
+|   `members`    | List of members in a team | array  |
 
 ### Reset team invitation
 

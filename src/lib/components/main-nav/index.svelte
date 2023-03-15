@@ -5,10 +5,12 @@
   import NavItem from "./nav-item.svelte";
   import menuState from "./mobile-menu/state";
   import LoginButton from "./login-button.svelte";
+  import ContactButton from "./contact-button.svelte";
   import DemoButton from "./demo-button.svelte";
   import DashboardButton from "./dashboard-button.svelte";
   import Logo from "../svgs/logo.svelte";
   import SignUpButtonTablet from "./sign-up-button-tablet.svelte";
+  import ContactButtonTablet from "./contact-button-tablet.svelte";
   import AnnouncementBanner from "$lib/components/banners/announcement.svelte";
   import SkipToContent from "../skip-to-content.svelte";
   import GithubStars from "./github-stars.svelte";
@@ -126,6 +128,7 @@
     <div class="login-wrapper items-center hidden space-x-x-small">
       <GithubStars />
       {#if isLoggedIn}
+        <ContactButton />
         <DashboardButton />
       {:else}
         <LoginButton />
@@ -138,6 +141,8 @@
       </div>
       {#if !$menuState && !isLoggedIn}
         <SignUpButtonTablet />
+      {:else}
+        <ContactButtonTablet />
       {/if}
       <MobileMenuToggle />
     </div>

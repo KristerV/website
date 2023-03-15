@@ -48,7 +48,17 @@ Run `pyenv versions` to see which Python versions are pre-installed in Gitpod.
 
 The easiest way to install a new Python version is to use `pyenv install <VERSION>`. For example, suppose you wanted to install Python `3.6.4`, you would run `pyenv install 3.6.4`.
 
-You can switch between Python versions using `pyenv local <VERSION>`. For example, if you wanted to switch to Python version `2.7.17` you would run `pyenv local 2.7.17`. This will create a `.python-version` file that controls which Python version is the default in your project. (Note: When running it in a Dockerfile, replace `local` with `global` to change the system default.)
+You can switch between Python versions using `pyenv local <VERSION>`. For example, if you wanted to switch to Python version `2.7.17` you would run `pyenv local 2.7.17`. This will create a `.python-version` file that controls which Python version is the default in your project.
+
+If you want to setup a [custom dockerfile](/docs/configure/workspaces/workspace-image#use-a-custom-dockerfile) so that you don't have to repeat the process, here's how your `.gitpod.Dockerfile` could look like:
+
+```dockerfile
+# You could use `gitpod/workspace-full` as well.
+FROM gitpod/workspace-python
+
+RUN pyenv install 3.11 \
+    && pyenv global 3.11
+```
 
 ## [Start tasks](/docs/configure/workspaces/tasks)
 

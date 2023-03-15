@@ -31,7 +31,7 @@
       },
     },
     {
-      text: "Contact Sales",
+      text: "Talk to an expert",
       href: "/contact/sales?subject=enterprise",
       icon: {
         component: Headphones,

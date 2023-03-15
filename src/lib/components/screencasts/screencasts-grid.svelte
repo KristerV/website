@@ -16,11 +16,6 @@
   data-analytics={`{"context":"grid"}`}
 >
   {#each screencasts as screencast}
-    <Screencast
-      {headlineOrder}
-      {screencast}
-      screencastNumber={screencast.nextScreencast ||
-        screencast.screencastNumber}
-    />
+    <Screencast {headlineOrder} {screencast} />
   {/each}
 </div>

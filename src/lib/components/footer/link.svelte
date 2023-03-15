@@ -20,7 +20,7 @@
 </style>
 
 <a
-  sveltekit:prefetch
+  data-sveltekit-preload-data
   {href}
   {rel}
   {target}

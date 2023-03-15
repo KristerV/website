@@ -1,3 +1,8 @@
+<script lang="ts">
+  let clazz = "";
+  export { clazz as class };
+</script>
+
 <style lang="postcss">
   path {
     @apply transition-all delay-[50ms] duration-200;
@@ -11,6 +16,7 @@
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
   {...$$restProps}
+  class={clazz}
 >
   <path
     fill-rule="evenodd"

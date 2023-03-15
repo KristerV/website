@@ -14,7 +14,7 @@
     class="grid gap-micro justify-center mx-auto mt-small max-w-[648px] lg:max-w-[980px] md:grid-cols-2 lg:grid-cols-[316px,316px,316px]"
   >
     {#each benefits as benefit}
-      <CardSmall card={benefit} />
+      <CardSmall card={benefit} titleClassNames="h5" />
     {/each}
   </div>
 </Section>

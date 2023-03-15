@@ -2,7 +2,6 @@
   import { trackEvent, trackIdentity } from "../segment.svelte";
   import Input from "$lib/components/ui-library/input";
   import Button from "$lib/components/ui-library/button";
-  import Checkbox from "$lib/components/ui-library/checkbox";
   import Card from "$lib/components/ui-library/card";
   import type { Form } from "$lib/types/form";
 
@@ -17,11 +16,6 @@
       el: null,
       valid: false,
       value: "",
-    },
-    consent: {
-      el: null,
-      valid: false,
-      checked: false,
     },
   };
 
@@ -93,25 +87,10 @@
           id="email"
         />
         <div>
-          <div>
-            <Checkbox
-              hasError={isFormDirty && !formData.consent.valid}
-              label="I agree to receive email communications. I can unsubscribe at any time."
-              on:change={() => {
-                formData.consent.valid =
-                  formData.consent.checked &&
-                  formData.consent.el.validity.valid;
-              }}
-              bind:checked={formData.consent.checked}
-              bind:element={formData.consent.el}
-              labelClasses="text-sm"
-            />
-          </div>
           <p class="!text-sm no-prose">
-            By submitting this form I acknowledge that I have read and
-            understood <a class="!underline" href="/privacy"
-              >Gitpod’s Privacy Policy.</a
-            >
+            By submitting this form, I confirm that I acknowledge the collection
+            and processing of personal data by Gitpod, as further described in
+            the <a class="!underline" href="/privacy">Privacy Policy.</a>
           </p>
           <span>
             <Button

@@ -21,6 +21,6 @@
     ? "color: var(--brand-ripe); border-color: currentColor; font-weight: 600"
     : ""}
   {href}
-  sveltekit:prefetch
+  data-sveltekit-preload-data
   {...$$props}><slot /></a
 >

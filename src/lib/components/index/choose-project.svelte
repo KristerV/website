@@ -157,7 +157,7 @@
 
   .strikethrough {
     transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-    color: var(--sub);
+    color: var(--slight-grey);
   }
 
   .strikethrough::after {
@@ -166,7 +166,10 @@
     display: block;
     width: 100%;
     height: 3px;
-    margin-top: -0.6em;
+    margin-top: -0.5em;
+    @media (max-width: 640px) {
+      margin-top: -0.6em;
+    }
     transform-origin: center left;
     animation: strikethrough 0.6s 0.4s cubic-bezier(0.55, 0, 0.1, 1) 1 forwards;
     transition: 0.4s cubic-bezier(0.55, 0, 0.1, 1);
@@ -182,18 +185,20 @@
   @keyframes strikethrough {
     from {
       transform: scaleX(0);
-      background: var(--sub);
+      background: var(--slight-grey);
     }
     to {
       transform: scaleX(1);
-      background: var(--sub);
+      background: var(--slight-grey);
     }
   }
 </style>
 
 <div class="row">
   <Section>
-    <div class="h1 text-black font-semibold text-center dark:text-important">
+    <div
+      class=" text-3xl sm:text-5xl text-black font-bold text-center dark:text-important"
+    >
       Select project,
       <br />
       {#each Object.entries(animatedTexts) as [device, texts]}

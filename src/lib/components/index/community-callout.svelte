@@ -7,14 +7,18 @@
 <Section class="flex flex-col">
   <div class="mt-small">
     <img
-      class="object-cover dark:hidden mx-auto w-[75%]"
+      class="object-cover dark:hidden mx-auto sm:w-[75%]"
       src="/images/community/squad.webp"
       alt="4 3d modeled characters representing a squad of community heroes"
+      width="100%"
+      height="100%"
     />
     <img
-      class="hidden dark:block object-cover mx-auto max-w-[67.5rem]"
+      class="hidden dark:block object-cover mx-auto sm:max-w-[67.5rem]"
       src="/images/community/squad-dark.webp"
       alt="4 3d modeled characters representing a squad of community heroes"
+      width="100%"
+      height="100%"
     />
   </div>
 

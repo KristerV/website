@@ -16,9 +16,18 @@ With VS Code Desktop Support, you keep your local editor configurations<sup>1</s
 
 ## Open a workspace in VS Code Desktop
 
-There are currently two supported ways to open a VS Code Desktop session connected to a Gitpod workspace, either by choosing VS Code Desktop as your default preference, or directly from within VS Code Browser itself.
+There are currently three supported ways to open a VS Code Desktop session connected to a Gitpod workspace, either by opening it from the [Gitpod dashboard](https://gitpod.io/workspaces), choosing VS Code Desktop as your default preference, or directly from within VS Code Browser itself.
 
-### From VS Code Browser
+### Open VS Code Desktop from the Gitpod Dashboard
+
+You can start a workspace with VS Code Desktop directly from [Gitpod Dashboard](https://gitpod.io/workspaces). You can do that from by clicking on the `New Workspace` button. Then, you can select the [context url](/docs/introduction/learn-gitpod/context-url), Editor and custom [workspace class](/docs/configure/workspaces/workspace-classes).
+
+<figure>
+<video onloadstart="this.playbackRate = 1.5;" controls playsinline autoplay loop muted class="shadow-medium w-full rounded-xl max-w-2xl mt-x-small" alt="Start Gitpod new workspace with options" src="/images/docs/new-workspace-start-with-options.webm" type="video/webm"></video>
+    <figcaption>Open New Gitpod Workspace with VS Code Desktop • <a href="https://gitpod.io/workspaces">Gitpod Dashboard</a></figcaption>
+</figure>
+
+### Open VS Code Desktop from VS Code Browser
 
 1. Start a new Gitpod workspace
 2. Open the command palette (<Keybind>CtrlCmd + Shift + P</Keybind>)
@@ -30,7 +39,7 @@ You will now be redirected to VS Code Desktop.
 ![Open VS Code via the Command Palette](/images/editors/open-in-vscode-command-palette-dark-theme.png)
 _Open VS Code via the Command Palette_
 
-### On Workspace Start
+### Open VS Code Desktop using your preferences
 
 1. Navigate to your [Gitpod preferences](https://gitpod.io/preferences)
 2. Select "VS Code" (without the browser label)
@@ -192,7 +201,7 @@ See [Workspace Trust](https://code.visualstudio.com/docs/editor/workspace-trust)
 
 ## FAQs
 
-### When opening VS Code Destkop, the owner token wasn't copied to my clipboard, where can I find it?
+### When opening VS Code Desktop, the owner token wasn't copied to my clipboard, where can I find it?
 
 When opening VS Code Desktop, if you are being prompted for the owner token password, but cannot copy it to clipboard, you can find the password on the gitpod [workspaces page](https://gitpod.io/workspaces) under "connect via SSH".
 
@@ -216,6 +225,18 @@ If you're unsure whether you're connecting via the local companion, or SSH Gatew
 ![The SSH host information shown in the bottom left of VS Code Desktop](/images/editors/show-ssh-connection-vscode-light-theme.png)
 ![The SSH host information shown in the bottom left of VS Code Desktop](/images/editors/show-ssh-connection-vscode-dark-theme.png)
 _The SSH host information shown in the bottom left of VS Code Desktop_
+
+### I'm being asked to choose the `platform of the remote host`. What should I choose?
+
+When connecting, sometimes VS Code Desktop fails to automatically detect the host OS of a Gitpod workspace, asking the following: `Select the platform of the remote host "{id}"`.
+
+No matter what the OS is on your computer, you should always choose `Linux` as the remote host platform, since this is the operating system all Gitpod workspaces run on.
+
+If you choose another option, you may encounter an error like this:
+
+```text
+Resolver error: Error: Got bad result from install script
+```
 
 ### I'm being prompted for a password/passphrase but VS Code Desktop cannot authenticate?
 
@@ -246,6 +267,15 @@ Gitpod extension delegates ssh connection to the [MS Remote - SSH](https://marke
 Host *.gitpod.io
     ForwardAgent yes
 ```
+
+## Upload Files
+
+You can upload files to your workspace by dragging and dropping them into the editor. This method works with every IDE (e.g. Intellij, PyCharm, etc.)
+
+<figure>
+  <video onloadstart="this.playbackRate = 1.5;" controls playsinline autoplay loop muted class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" src="/images/editors/file-upload-drag-and-drop.webm" type="video/webm"></video>
+  <figcaption>Upload Files from local to VS Code Desktop</figcaption>
+</figure>
 
 ## Troubleshooting
 

@@ -167,13 +167,44 @@ Currently we put some startup scripts for the workspace-images at `~/.bashrc.d`,
 bash -lic 'true'
 ```
 
-
 ## FAQs
 
+### [Why is my custom dockerfile rebuilding everytime even with no change made to it?](https://discord.com/channels/816244985187008514/1069452552111923280)
+
+<!-- DISCORD_BOT_FAQ - DO NOT REMOVE -->
+
+This usually happens when you don't pin the image tag (AKA version) inside your [custom dockerfile](#use-a-custom-dockerfile).
+
+In such cases, it could be that there has been long gaps between the time you reuse a workspace or create a new one. We usually release new images every week so if there was more than one week between each start then the image will be rebuild every time.
+
+So, for example, if your `.gitpod.Dockerfile` looks like the following:
+
+```dockerfile
+FROM gitpod/workspace-full:latest
+
+# ... more stuff
+```
+
+You could grab a timestamped tag from [here](https://hub.docker.com/r/gitpod/workspace-full/tags) for `gitpod/workspace-full`.
+
+And then your `.gitpod.Dockerfile` could look like:
+
+```dockerfile
+FROM gitpod/workspace-full:2023-01-16-03-31-28
+
+# ... more stuff
+```
+
+Note: Please grab a recent tag from the linked page, don't copy paste the example from here.
+
+Also see [docker-image-tags](#docker-image-tags) for more info.
+
 ### [How to run a Desktop app for GUI development inside a Gitpod workspace](https://discord.com/channels/816244985187008514/1069538137572909106)
+
 <!-- DISCORD_BOT_FAQ - DO NOT REMOVE -->
 
 If you wish to do GUI application development in Gitpod and getting errors such as:
+
 - Unable to init server: Could not connect : Connection refused
 - No display server running
 - Xorg missing

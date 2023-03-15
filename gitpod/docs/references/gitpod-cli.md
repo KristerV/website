@@ -222,12 +222,11 @@ The default timeout, and the ability to extend a workspace timeout depends on yo
 
 ### set
 
-Sets the current workspace's timeout to the given value. The value must be a positive integer followed by a unit of time. The unit of time can be one of `s`, `m`, `h` for seconds, minutes, hours respectively. The maximum workspace timeout is 24 hours.
+Sets the current workspace's timeout to the given value. The value must be a positive integer followed by a unit of time. The unit of time can be one of `m`, `h` for minutes and hours, respectively. The maximum workspace timeout is 24 hours.
 
 <!--
 Technically, Following ones are also valid:
 
-* `gp timeout set 300s`
 * `gp timeout set 300m`
 * `gp timeout set 24h`
 

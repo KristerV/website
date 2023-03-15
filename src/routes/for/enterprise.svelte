@@ -46,12 +46,12 @@
     alt: "Enter Rug",
   }}
   btnPrimary={{
-    text: "Get a demo",
-    href: "/contact/get-demo",
+    text: "Talk to an expert",
+    href: "/contact/sales?subject=enterprise",
   }}
   btnSecondary={{
-    text: "Contact sales",
-    href: "/contact/sales?subject=enterprise",
+    text: "Get a demo",
+    href: "/contact/get-demo",
   }}
 />
 
@@ -75,7 +75,11 @@
     slot="content"
   >
     {#each featureCards as card}
-      <CardSmall class="m-macro px-xx-small relative" card={card.card}>
+      <CardSmall
+        class="m-macro px-xx-small relative"
+        card={card.card}
+        titleClassNames="h5"
+      >
         {#if card.pill}
           <Pill
             class="absolute right-x-small -top-2"

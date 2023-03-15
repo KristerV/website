@@ -20,23 +20,25 @@
     largeWorkspacePrice * (largeWorkspaces / 100) * members * monthlyHours;
 
   $: usedCredits =
-    10 * monthlyHours * (standardWorkspaces / 100) +
-    20 * monthlyHours * (largeWorkspaces / 100);
+    (10 * monthlyHours * (standardWorkspaces / 100) +
+      20 * monthlyHours * (largeWorkspaces / 100)) *
+    members;
 
   $: toalHoursUsingOrgMembers = members * monthlyHours;
 
   $: displayValue = getResult(
     members,
     usedCredits,
+    // @ts-ignore
     calculatedPrice,
     toalHoursUsingOrgMembers
   );
 
   const getResult = (
     members: number,
-    usedCredits: number,
-    calculatedPrice: number,
-    toalHoursUsingOrgMembers: number
+    usedCredits: number
+    // calculatedPrice: number,
+    // toalHoursUsingOrgMembers: number
   ) => {
     if (members === 1) {
       if (usedCredits <= 500) {
@@ -47,18 +49,12 @@
       } else {
         return 9 + (usedCredits - 1000) * 0.036;
       }
-    } else if (
-      members >= 2 &&
-      usedCredits <= 1000 &&
-      toalHoursUsingOrgMembers <= 100
-    ) {
+    } else if (members >= 2) {
       if (usedCredits <= 1000) {
         return 9;
       } else {
         return 9 + (usedCredits - 1000) * 0.036;
       }
-    } else {
-      return calculatedPrice;
     }
   };
 </script>
@@ -77,8 +73,8 @@
   <div>
     {#if members >= 100}
       <p>
-        For large organizations of 100+ members, please contact sales to receive
-        a custom quote.
+        For large organizations of 100+ members, please Talk to an expert to
+        receive a custom quote.
       </p>
       <br />
       <LinkButton

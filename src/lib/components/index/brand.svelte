@@ -21,7 +21,7 @@
 <div class="brand">
   <svelte:component
     this={logo}
-    style={`transform: ${transform}; width: 5.9375rem; height: 100%;`}
+    style={`transform: ${transform}; width: 5.9375rem; height: auto;`}
     class={className}
   />
 </div>

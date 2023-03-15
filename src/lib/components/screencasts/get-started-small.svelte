@@ -18,6 +18,8 @@
       Spin up fresh cloud development environments for each task, in the cloud,
       in seconds.
     </p>
-    <LinkButton href="/#get-started" variant="primary">Try now</LinkButton>
+    <LinkButton href="/#get-started" variant="primary"
+      >Start for free</LinkButton
+    >
   </div>
 </Card>

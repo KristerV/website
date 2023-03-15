@@ -19,7 +19,7 @@ This guide assumes familiarity with:
 
 ## Getting started / Quick Start
 
-`youtube: w65POyu3ZUQ`
+`youtube: ij1msCffQZA`
 
 To see a full working Java application, take a look at [gitpod-io/spring-petclinic](https://github.com/gitpod-io/spring-petclinic/). To update an existing Java application, follow the steps below in this guide.
 
@@ -318,7 +318,7 @@ See [.gitpod.yml reference](/docs/references/gitpod-yml) for more.
 
 Gitpod prebuilds reduce wait time by installing dependencies or running builds before you start a new workspace. By default, Gitpod prepares prebuilt workspaces for all changes on the default branch and pull/merge requests coming from the same repository. However, prebuilds save only the `workspace` directory, any files stored outside of the workspace directory will be lost. For Java applications, we recommend to execute build commands within an `init` startup task.
 
-`youtube: ZtlJ0PakUHQ`
+`youtube: DwkoOz1GSVg`
 
 See [prebuilds](/docs/configure/projects/prebuilds) and [start tasks](/docs/configure/workspaces/tasks) for more.
 

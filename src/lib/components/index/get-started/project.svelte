@@ -24,9 +24,9 @@
   }
 </style>
 
-<div class="w-[28rem] inline-flex flex-col">
+<div class="w-72 sm:w-[28rem] inline-flex flex-col">
   <LinkButton
-    class="flex h-14 items-center justify-between group !p-3"
+    class="flex h-12 items-center justify-between group !p-3"
     variant="cta"
     size="large"
     href={`https://gitpod.io#${githubUrl}`}
@@ -41,9 +41,9 @@
       <img
         src={`/${logo}`}
         {alt}
-        class="mr-macro transition-all duration-200 delay-[50ms] grayscale group-focus:grayscale-0 group-hover:grayscale-0"
-        width="24"
-        height="24"
+        class="ml-macro mr-[0.75rem] transition-all duration-200 delay-[50ms] grayscale group-focus:grayscale-0 group-hover:grayscale-0"
+        width="27"
+        height="27"
       />
       <div
         class="w-48 text-left text-[#565252] transition-all duration-200 delay-[50ms] group-hover:text-black dark:group-hover:text-black dark:text-important"

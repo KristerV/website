@@ -1,7 +1,6 @@
 <script lang="ts">
   import { ides } from "$lib/contents/home";
   import Section from "../section.svelte";
-  import Toggle from "../toggle.svelte";
   import IdeSwitcher from "./ide-switcher.svelte";
   import LinkButton from "$lib/components/ui-library/link-button";
   let selectedIde = "vscode";
@@ -32,51 +31,48 @@
 
 <Section>
   <div class="row">
-    <h2 class="text-center">Your environment, your tools, your craft</h2>
+    <h3 class="text-left sm:text-center text-3xl sm:text-5xl	font-bold">
+      What's a CDE?
+    </h3>
+    <p
+      class="text-left sm:text-center text-lg sm:text-2xl mt-xx-small mb-x-small mx-auto max-w-4xl"
+    >
+      CDEs are high-powered, automated development environments in the cloud.
+      They are perfectly configured for each task enabling instant onboarding
+      and collaboration.
+    </p>
+    <div class="text-left sm:text-center m-auto mb-x-small">
+      <LinkButton variant="gray" size="medium" href="/cde"
+        >Learn more about CDEs</LinkButton
+      >
+    </div>
     <div class="max-w-5xl mx-auto">
-      <Toggle
-        class="mt-x-small mb-macro"
-        labelLeft="Desktop"
-        labelRight="Browser"
-        on:change={(e) => {
-          ideType = "desktop";
-          // @ts-ignore
-          toggleChecked = e.currentTarget.checked;
-        }}
-        checked={toggleChecked}
-        id="screenshot"
-      />
       <div class="relative">
-        <div class="py-micro md:pr-micro lg:px-xx-small">
-          <img
-            src="/images/index/{idetoRender.screenshots[ideType]}"
-            alt={idetoRender.label}
-            class="shadow-highlight rounded-lg"
-            width="100%"
-            height="100%"
-          />
-        </div>
+        <!-- TODO: Fix Toggle -->
         <IdeSwitcher
           on:message={handleIdeChange}
           {ides}
           activeByDefaultName="vscode"
           {ideType}
           {activeIdeName}
+          on:change={(e) => {
+            ideType = "desktop";
+            // @ts-ignore
+            toggleChecked = e.currentTarget.checked;
+          }}
+          checked={toggleChecked}
+          id="screenshot"
         />
+        <div class="pt-xx-small md:pr-micro lg:px-xx-small">
+          <img
+            src="/images/index/{idetoRender.screenshots[ideType]}"
+            alt={idetoRender.label}
+            class="shadow-highlight rounded-xl"
+            width="100%"
+            height="100%"
+          />
+        </div>
       </div>
-    </div>
-    <div class="text-center m-auto">
-      <h3 class="mt-medium md:mt-x-large">We adapt, so you don't need to</h3>
-      <p class="text-large mt-xx-small mb-x-small mx-auto max-w-[638px]">
-        Run a desktop or browser based version of VS Code or any JetBrains IDE
-        and customise it to your individual needs - from themes to extensions,
-        you have full control.
-      </p>
-      <LinkButton
-        variant="primary"
-        size="large"
-        href="https://gitpod.io/workspaces/">Try now</LinkButton
-      >
     </div>
   </div>
 </Section>

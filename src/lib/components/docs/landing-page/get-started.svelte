@@ -28,8 +28,10 @@
     </p>
     <div class="flex flex-wrap gap-4 justify-start md:justify-center">
       {#each getStartedItems as getStartedItem}
-        <LinkButton sveltekit:prefetch href={getStartedItem.href} variant="cta"
-          >{getStartedItem.label}</LinkButton
+        <LinkButton
+          data-sveltekit-preload-data
+          href={getStartedItem.href}
+          variant="cta">{getStartedItem.label}</LinkButton
         >
       {/each}
     </div>

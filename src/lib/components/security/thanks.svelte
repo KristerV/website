@@ -16,6 +16,25 @@
   />
   <div class="mt-x-large" slot="content">
     <h2 class="h4 border-b-[3px] inline-block border-primary border-solid">
+      2023
+    </h2>
+    <ol class="max-w-[285px] mx-auto my-x-small">
+      <li>
+        <a rel="nofollow" href="https://ch.linkedin.com/in/elliot-w-27962779"
+          >Elliot Ward</a
+        > from Snyk.
+      </li>
+      <li>
+        <a
+          rel="nofollow"
+          href="https://www.linkedin.com/in/swapnil-kothawade-813854a7"
+          >Swapnil Kothawade</a
+        > from ControlCase.
+      </li>
+    </ol>
+    <h2
+      class="h4 mt-x-large border-b-[3px] inline-block border-primary border-solid"
+    >
       2022
     </h2>
     <ol class="max-w-[285px] mx-auto my-x-small">
@@ -24,7 +43,8 @@
         York University.
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/0x33c0unt/"> Yusuf Kocadaş</a>.
+        <a href="https://www.linkedin.com/in/0x33c0unt/"> Yusuf Kocadaş</a> from
+        Cyrex.
       </li>
     </ol>
     <h2
