@@ -108,7 +108,7 @@ To do so:
 workspaceLocation: frontend/main.code-workspace # Relative to /workspace dir
 ```
 
-4. [See it in action!](//docs/configure/workspaces#see-it-in-action)
+4. [See it in action!](/docs/configure/workspaces#see-it-in-action)
 
 ## FAQs
 

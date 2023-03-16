@@ -9,11 +9,9 @@ export const getStartedItems: GetStartedItem[] = [
   {
     href: "/screencasts",
     label: "Watch video",
-    // TODO: This is a bit "choose your own adventure" and could lose the user
   },
   {
     href: "/docs/introduction/getting-started/quickstart",
     label: "Use Quickstart",
-    // TODO: Consider changing language
   },
 ];

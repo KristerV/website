@@ -300,7 +300,7 @@ export const automationFirstFeature: verticalFeature = {
   paragraph:
     "Simply add your build command into a .gitpod.yml file and let Gitpod do the heavy-lifting. Once you’ve experienced the freedom of ephemeral workspaces, you’ll never want to go back to long-lived manually-maintained environments.",
   moreButton: {
-    href: "https://www.gitpod.io//docs/configure/workspaces",
+    href: "https://www.gitpod.io/docs/configure/workspaces",
     text: "More on Gitpod YAML",
   },
 };

@@ -71,11 +71,11 @@ See the [Gitpod CLI](/docs/references/gitpod-cli) page for more.
 
 ## Validate your Gitpod configuration
 
-You can test your configuration including your `.gitpod.yml` without leaving your worksapce or committing you changes by using the `gp rebuild` command. This command works using a [Debug Workspace](/docs/configure/workspaces/debug-workspaces), which you can think of as a mini workspace running in your workspace and allows you to troubleshoot workspace configuration (ports, tasks, etc) and more.
+You can test your configuration including your `.gitpod.yml` without leaving your worksapce or committing you changes by using the `gp rebuild` command. You can think of what this command does as opening a workspace that runs from within your current workspace, allowing you to troubleshoot workspace configuration (ports, tasks, etc) and more.
 
 <figure>
-<img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="Debug workspace startup and shutdown" src="/images/testing-changes/gp_rebuild.png">
-    <figcaption>Debug workspace startup and shutdown</figcaption>
+<img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="npm rebuild startup and shutdown" src="/images/testing-changes/gp_rebuild.png">
+    <figcaption>Running and stopping the gp rebuild command</figcaption>
 </figure>
 
 You can use the `gp rebuild` command to test various configuration setups: simple workspace starts (without Prebuilds enabled), workspace starts using a Prebuild, or for debugging Prebuilds themselves. See below for the differences:
@@ -91,16 +91,16 @@ You can use the `gp rebuild` command to test various configuration setups: simpl
 
 ### Validate a workspace start
 
-1. Run `gp rebuild` to emit a Debug Workspace URL.
-2. Open the Debug Workspace and review your configuration.
+1. Run `gp rebuild` to emit a Workspace URL.
+2. Open the workspace and review your configuration.
 3. Update your configuration in the original workspace, and re-run `gp rebuild` (if needed).
 
 ### Validate a Prebuild
 
 You can run `gp rebuild --prebuild` to validate how a prebuild process would look upon completion (this runs `before` and `init` tasks, but not `command` tasks).
 
-1. Run `gp rebuild --prebuild` - This command will emit a Debug Workspace URL.
-2. Open the debug workspace to check your configuration.
+1. Run `gp rebuild --prebuild` - This command will emit a Workspace URL.
+2. Open the workspace to check your configuration.
 3. Update configuration in the original workspace, re-running `gp rebuild` if needed.
 
 > **Important:** This command runs the workspace _as_ a Prebuild not _from_ a prebuild. Meaning this produces the same environment that is created by a Prebuild process, before a workspace is subsequently started using it.

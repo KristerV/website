@@ -69,7 +69,7 @@ Let's say you are a developer working in a production environment and need to ch
 
 2. By clicking on this "edit code" button on one of your applications, you will be redirected to Gitpod, which will already be connected to your Git account. Thus, without leaving your browser or any installation needed, you can quickly change on Gitpod with all the correct dependencies loaded and the same complete environment.
 
-3. To describe your workspace you can configure it through a `.gitpod.yml` file, located at the root of your project, written in YAML syntax. You can read more about it in [Gitpod Documentation](https://www.gitpod.io//docs/configure/workspaces).
+3. To describe your workspace you can configure it through a `.gitpod.yml` file, located at the root of your project, written in YAML syntax. You can read more about it in [Gitpod Documentation](https://www.gitpod.io/docs/configure/workspaces).
 
 Here is the example:
 

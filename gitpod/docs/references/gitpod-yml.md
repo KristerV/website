@@ -11,7 +11,7 @@ title: .gitpod.yml
 
 The `.gitpod.yml` file instructs Gitpod on how to prepare and build a project, such as starting development servers and configuring [Prebuilds](/docs/configure/projects/prebuilds). Below is a full reference of all available properties. To see the underlying schema, please refer to [`gitpod-io/gitpod`](https://github.com/gitpod-io/gitpod/blob/main/components/gitpod-protocol/data/gitpod-schema.json) in the [gitpod-io/gitpod](https://github.com/gitpod-io/gitpod) repository.
 
-> For a more comprehensive configuration guide, see [configuring a project](//docs/configure/workspaces).
+> For a more comprehensive configuration guide, see [configuring a project](/docs/configure/workspaces).
 
 - [.gitpod.yml](#.gitpod.yml)
   - [`additionalRepositories`](#additionalrepositories)
