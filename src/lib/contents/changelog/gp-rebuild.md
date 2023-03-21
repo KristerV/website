@@ -23,7 +23,7 @@ title: Announcing `gp rebuild`
 
 The `gp rebuild` command comes with all Gitpod workspaces — try it out today!
 
-The power of a [CDE](https://www.gitpod.io/cde) comes with a well-defined configuration. In Gitpod, that's your configuration defined in your `gitpod.yml`. Which is why Gitpod users kept asking us to find ways to more easily lint, validate and iterate on a workspace configuration. A quick GitHub search shows some of the many user requests, such as: [#9025](https://github.com/gitpod-io/gitpod/issues/9025), [#12893](https://github.com/gitpod-io/gitpod/issues/12893) and [#6818](https://github.com/gitpod-io/gitpod/issues/6818).
+The power of a [CDE](https://www.gitpod.io/cde) comes with a well-defined configuration. In Gitpod, that's your configuration defined in your `gitpod.yml`. This is why Gitpod users kept asking us to find ways to more easily lint, validate and iterate on a workspace configuration. A quick GitHub search shows some of the many user requests, such as: [#9025](https://github.com/gitpod-io/gitpod/issues/9025), [#12893](https://github.com/gitpod-io/gitpod/issues/12893) and [#6818](https://github.com/gitpod-io/gitpod/issues/6818).
 
 Previously, to update your configuration, you need to commit your `.gitpod.yml`, and start a new workspace. This could mean a delay to finding out your configuration was incorrect, and polluting your source control with bad commits. We wanted to "shift left" and bring any errors, validation and suggestions closer to when you are actually updating your configuration.
 
