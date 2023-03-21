@@ -21,7 +21,7 @@ title: Announcing `gp rebuild`
 - Use `gp rebuild` to validate configuration updates within the workspace without committing.
 - Use `gp rebuild --prebuild` to debug a Prebuild by creating a workspace "as a prebuild".
 
-The `gp rebuild` command comes with all Gitpod workspaces—try it out today!
+The `gp rebuild` command comes with all Gitpod workspaces — try it out today!
 
 The power of a [CDE](https://www.gitpod.io/cde) comes with a well-defined configuration. In Gitpod, that's your configuration defined in your `gitpod.yml`. Which is why Gitpod users kept asking us to find ways to more easily lint, validate and iterate on a workspace configuration. A quick GitHub search shows some of the many user requests, such as: [#9025](https://github.com/gitpod-io/gitpod/issues/9025), [#12893](https://github.com/gitpod-io/gitpod/issues/12893) and [#6818](https://github.com/gitpod-io/gitpod/issues/6818).
 
