@@ -71,7 +71,7 @@ See the [Gitpod CLI](/docs/references/gitpod-cli) page for more.
 
 ## Validate your Gitpod configuration
 
-You can test your configuration including your `.gitpod.yml` without leaving your worksapce or committing you changes by using the `gp rebuild` command. You can think of what this command does as opening a workspace that runs from within your current workspace, allowing you to troubleshoot workspace configuration (ports, tasks, etc) and more.
+You can test your configuration, including your `.gitpod.yml`, without leaving your workspace or committing your changes by using the `gp rebuild` command. This command opens a workspace (that runs from within your current workspace) which includes your configuration changes. Thus, allowing you to troubleshoot workspace configuration (ports, tasks, etc.) and more.
 
 <figure>
 <img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="npm rebuild startup and shutdown" src="/images/testing-changes/gp_rebuild.png">
