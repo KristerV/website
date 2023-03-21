@@ -45,7 +45,7 @@ ports:
     description: Website Preview
 ```
 
-**Caption:** An example project configured to install, build and run a `yarn` project with a webserver, exposed on port 3000. On start, the webserver preview is opened automatically.
+**Caption:** An example project configured to install, build and run a `yarn` project with a webserver, exposed on port 3000. On start, an in-editor preview of the webserver is opened automatically.
 
 ### The workspace image
 
