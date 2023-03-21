@@ -9,7 +9,7 @@ title: Workspaces
 
 # Workspaces
 
-Gitpod is not simply "moving your laptop into the cloud". A key benefit of using a Cloud Development Environment ([CDE](/cde)) is _reproducibility_. When your workspace is configured, opening a new workspace is effortless—allowing you to fully embrace ephemeral development environments.
+Gitpod is not simply "moving your laptop into the cloud". One key benefit of using a Cloud Development Environment ([CDE](/cde)) is _reproducibility_. When your workspace is configured, opening a new workspace is effortless—allowing you to fully embrace ephemeral development environments.
 
 ## Understanding Gitpod configuration
 
