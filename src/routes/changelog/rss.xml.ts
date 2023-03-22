@@ -27,13 +27,13 @@ export const get: import("@sveltejs/kit").RequestHandler = async ({
         /src="\//g,
         'src="https://www.gitpod.io/'
       ),
+      date: entry.date,
       url: `https://www.gitpod.io/changelog/${stringToBeautifiedFragment(
-        entry.title
+        entry.customSlug ? entry.customSlug : entry.title
       )}`,
       guid: `https://www.gitpod.io/changelog/${stringToBeautifiedFragment(
-        entry.title
+        entry.customSlug ? entry.customSlug : entry.title
       )}`,
-      date: entry.date,
       enclosure: {
         url: `https://www.gitpod.io/images/changelog/${entry.image}`,
         type: "image/webp",

@@ -8,4 +8,5 @@ export type ChangelogEntry = {
   fileName: string;
   tag?: string;
   ogImage?: string;
+  customSlug?: string;
 };

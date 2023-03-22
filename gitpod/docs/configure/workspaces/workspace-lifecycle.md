@@ -64,16 +64,20 @@ Stopped workspaces are automatically deleted 14 days since the last workspace st
 
 ## Workspace Timeouts
 
-Running workspaces will stop automatically after a period of inactivity.
+Running workspaces stop automatically after a period of inactivity.
 
 ### Workspace Inactivity
 
 By default, workspaces stop following 30 minutes without user input (e.g. keystrokes or terminal input commands). You can increase the workspace timeout up to a maximum of 24 hours.
 
-### Editor Disconnect
+### Extend Inactivity Timeouts
 
-Currently, all timeouts are dependent on an active editor connection. Closing your Gitpod connected editor or IDE will reduce the workspace timeout to 5 minutes.
+> Free plan users cannot update their default workspace inactivity timeout (see [pricing](https://www.gitpod.io/pricing)).
 
-### Extending Timeouts
+**Current workspace** - You can extend the inactivity timeout of their current workspace using the `gp timeout set` command from the [Gitpod CLI](/docs/references/gitpod-cli) (installed in all gitpod workspaces by default), through the Command Palette in VS Code, or the Backend Control Center in JetBrains Gateway. Extending the workspace inactivity timeout only applies to the currently running workspace.
 
-Paying users of Gitpod can extend the inactivity timeout of their current workspace using the `gp timeout set` from the [Gitpod CLI](/docs/references/gitpod-cli), which is installed in all gitpod workspaces by default. Extending the workspace timeout does not affect the inactivity timeout of other any other workspaces.
+**Default** - You can set a default workspace inactivity timeout for all new workspaces opened via the [preferences page](https://gitpod.io/preferences). The timeout default cannot currently be set by an organization owner.
+
+### Editor or IDE Disconnect
+
+All inactivity timeouts are dependent on an active editor or IDE connection. Closing your Gitpod connected editor or IDE will reduce the workspace timeout to 5 minutes unless an explicit workspace inactivity timeout is set via user preference, or via the Gitpod CLI.

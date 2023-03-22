@@ -27,11 +27,11 @@
     class="announcement-banner flex justify-between items-center px-4 py-2 w-full bg-sand-dark dark:bg-card shadow-sm text-xs sm:text-sm md:text-base border-b border-divider border-solid"
     location="top"
   >
-    <span class="flex-1 text-right">🎊</span>
+    <span class="flex-1 text-right">🤝</span>
     <p class="flex-2 px-4 md:px-2 font-normal">
-      Gitpod Dedicated: the self-hosted alternative for large teams |
-      <a href="/dedicated" data-sveltekit-preload-data on:click={closeBanner}
-        >Request early access
+      Meet Gitpod's CEO and CTO at KubeCon EU |
+      <a href="/kubecon-demo" data-sveltekit-preload-data on:click={closeBanner}
+        >Schedule a meeting now
       </a>
     </p>
     <div class="flex-1 flex justify-end">

@@ -40,6 +40,10 @@
     // calculatedPrice: number,
     // toalHoursUsingOrgMembers: number
   ) => {
+    // if total hours is 0, return 0 => no price for inactive members
+    if (toalHoursUsingOrgMembers === 0) {
+      return 0;
+    }
     if (members === 1) {
       if (usedCredits <= 500) {
         return 0;

@@ -5,7 +5,7 @@
   import Tooltip from "../../tooltip.svelte";
 
   let members: number = 1;
-  let workspaceHours = 1;
+  let workspaceHours = 0;
 
   let largeWorkspace = 0;
 
@@ -50,14 +50,14 @@
         <Range
           id="hours"
           class="w-full"
-          min={1}
+          min={0}
           max={60}
           bind:value={workspaceHours}
           step={1}
         />
         <p class="absolute text-grey font-bold right-0 top-[50%] text-h6">
           <span class="text-important">{workspaceHours}</span>
-          hour{workspaceHours > 1 ? "s" : ""}
+          hour{workspaceHours > 0 ? "s" : ""}
         </p>
       </div>
       <div class="relative">

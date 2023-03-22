@@ -15,8 +15,10 @@
     const allEntries = await res.json();
     const changelogEntry: ChangelogEntryType = allEntries.find(
       (entry: ChangelogEntryType) =>
-        stringToBeautifiedFragment(entry.title) ===
-        reverseHtmlEscaping(params.slug)
+        entry.customSlug?.length > 0
+          ? entry.customSlug === params.slug
+          : stringToBeautifiedFragment(entry.title) ===
+            reverseHtmlEscaping(params.slug)
     );
     return { props: { changelogEntry } };
   };

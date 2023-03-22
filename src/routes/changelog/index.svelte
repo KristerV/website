@@ -38,8 +38,8 @@
     keywords:
       "updates, product, changes, features, releases, bugs, fixes, version, updates, improvements",
     // Update this each monthly release and enter the changelog URL into https://cards-dev.twitter.com/validator to force twitter to refresh it
-    image: "images/changelog/2023-01-31-og.jpg",
-    imageTwitter: "images/changelog/2023-01-31-og.jpg",
+    image: "images/changelog/timeouts.webp",
+    imageTwitter: "images/changelog/timeouts.webp",
   }}
 />
 
@@ -76,7 +76,7 @@
 <div
   class="flex flex-col space-y-x-large md:space-y-xxx-large divide-y divide-divider"
 >
-  {#each changelogEntries as { date, title, content, image, alt }, i}
+  {#each changelogEntries as { date, title, content, image, alt, customSlug }, i}
     <div
       class="changelog-entry flex flex-col md:flex-row last:pb-x-large md:last:pb-xxx-large {i !==
         0 &&
@@ -85,7 +85,9 @@
     >
       <ChangelogDate
         date={formatDate(date)}
-        href={`/changelog/${stringToBeautifiedFragment(title)}`}
+        href={`/changelog/${stringToBeautifiedFragment(
+          customSlug ? customSlug : title
+        )}`}
       />
       <Wrapper class="content-changelog w-full md:w-8/12">
         <img
@@ -99,7 +101,9 @@
         />
         <h2>
           <ChangelogLink
-            href={`/changelog/${stringToBeautifiedFragment(title)}`}
+            href={`/changelog/${stringToBeautifiedFragment(
+              customSlug ? customSlug : title
+            )}`}
           >
             {title}
           </ChangelogLink>

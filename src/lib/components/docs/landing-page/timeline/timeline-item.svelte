@@ -6,7 +6,9 @@
   $: formattedDate = new Intl.DateTimeFormat().format(
     new Date(timelineItem.date)
   );
-  $: changelogUri = stringToBeautifiedFragment(timelineItem.title);
+  $: changelogUri = stringToBeautifiedFragment(
+    timelineItem.customSlug ? timelineItem.customSlug : timelineItem.title
+  );
 </script>
 
 <div class="flex relative pb-12 ">

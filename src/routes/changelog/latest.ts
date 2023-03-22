@@ -5,7 +5,7 @@ export const get: import("@sveltejs/kit").RequestHandler = async ({
 }) => {
   const { fileName } = (locals.changelogEntries as ChangelogEntryType[]).find(
     (e) => {
-      return !e.tag || e.tag.indexOf("self-hosted") == -1;
+      return e.tag && e.tag.indexOf("rollup") != -1;
     }
   );
   return {
