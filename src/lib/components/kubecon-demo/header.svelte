@@ -36,12 +36,12 @@
   <div>
     <HeaderDescription
       class="!m-0"
-      title="Let's meet at KubeCon EU"
+      title="Let's meet at KubeCon EU, booth SU22"
       label="Conference"
       date="April 19-21"
       location="Amsterdam, The Netherlands"
-      description="Our CEO and CTO will be at KubeCon. Schedule a meeting now to discuss running Gitpod at your company.<br/><br/>
-      We'll be at Booth SU22, come and visit us."
+      description="Our CEO and CTO will be at KubeCon. Schedule a meeting now to discuss running cloud development environments at your company.      <br/><br/>
+      See you at Booth SU22!"
     />
   </div>
 
