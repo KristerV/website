@@ -27,14 +27,14 @@ Send us a message through the [contact form](https://www.gitpod.io/contact/suppo
 
 Run `gp init` on your terminal or manually create a file called `.gitpod.yml`
 
-- Put the following line in your `.gitpod.yml`:
+1. Put the following line in your `.gitpod.yml`:
 
 ```yaml
 image:
   file: .gitpod.Dockerfile
 ```
 
-- Create a file called `.gitpod.Dockerfile` and put the following content in it:
+2. Create a file called `.gitpod.Dockerfile` and put the following content in it:
 
 ```dockerfile
 FROM gitpod/workspace-full
@@ -43,6 +43,9 @@ RUN file="$HOME/.bashrc.d/770-scm_token.sh" \
     && printf '%s\n' 'if [[ "${GITPOD_WORKSPACE_CONTEXT_URL:-}" == *gitlab* ]]; then : "gitlab"; else : "github"; fi; scm_name="$_"' > "${file}" \
     && printf 'export SCM_TOKEN="$(%s)"\n' "gp credential-helper get <<<host=\${scm_name}.com | sed -n 's/^password=//p'" >> "${file}"
 ```
+
+3. [Validate your configuration changes](/docs/configure/workspaces#validate-your-gitpod-configuration) by running `gp validate` in your workspace.
+4. [Apply your .gitpod.yml changes](/docs/configure/workspaces#apply-configuration-changes) by committing and restarting a new workspace.
 
 Now you can use `$SCM_TOKEN` environment variable after you commit and create a new workspace, this variable will contain an API token based on the Git context (i.e. Gitlab/GitHub/Bitbucket)
 

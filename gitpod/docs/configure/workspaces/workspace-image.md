@@ -139,7 +139,15 @@ USER gitpod
 
 **Tailscale:** see [the Tailscale integration docs](/docs/integrations/tailscale#integration) for setting up Tailscale in a custom Dockerfile.
 
+## Validate and apply a workspace image
+
+To validate your workspace image is working execute the `gp validate` command from within the workspace with your configuration changes. For the configuration change to apply for all new workspaces you must commit and push your configuration to source control.
+
+For a full guide, see [Configuring Workspaces](/docs/configure/workspaces).
+
 ## Manually rebuild a workspace image
+
+If you want to force a rebuild of the image associated with a repository,
 
 Sometimes you find yourself in situations where you want to manually rebuild a workspace image, for example if packages you rely on released a security fix.
 

@@ -108,7 +108,8 @@ To do so:
 workspaceLocation: frontend/main.code-workspace # Relative to /workspace dir
 ```
 
-4. [See it in action!](/docs/configure/workspaces#see-it-in-action)
+4. [Validate your configuration changes](/docs/configure/workspaces#validate-your-gitpod-configuration) by running `gp validate` in your workspace.
+5. [Apply your .gitpod.yml changes](/docs/configure/workspaces#apply-configuration-changes) by committing and restarting a new workspace.
 
 ## FAQs
 

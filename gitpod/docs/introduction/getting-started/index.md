@@ -34,8 +34,6 @@ In this guide we'll walk you through the basics to get up and running with Gitpo
 
 The best way to get see the power of Gitpod, is to try it out by starting your first [Workspace](/docs/configure/workspaces).
 
-<!-- TODO: Is this the process we want to suggest? -->
-
 To start your first workspace:
 
 1. Navigate to a GitHub, GitLab or Bitbucket repository.
@@ -77,13 +75,13 @@ See [User Settings](/docs/configure/user-settings) for more ways to customize Gi
 Opening a repository in Gitpod starts a workspace and clones the source code. To start developing though, you would then have to install any required dependencies, run any build scripts and start servers. Luckily, with Gitpod, we can automate all of those steps.
 
 1. Add a `.gitpod.yml` at the root of your repository.
-   - **Tip:** Run `gp init` to generate a scaffold `.gitpod.yml` file.
-2. Use the `gp rebuild` command to test your configuration.
-3. Commit + push the configuration!
+   - You can use `gp init` to quickly generate the `.gitpod.yml` file.
+2. Use the `gp rebuild` command to validate your configuration is working.
+3. Commit and push to apply the configuration for all subsequent workspace starts.
 
-Now, every new workspace opened will run the steps defined in your `gitpod.yml`.
+Every opened workspace will now run the steps defined in your `gitpod.yml`.
 
-<!-- TODO: Gitpodify with `.gitpod.yml` -->
+For more, see the [.gitpod.yml reference](/docs/references/gitpod-yml) and [configuring workspaces](/docs/configure/workspaces).
 
 ### A gitpod.yml example
 
