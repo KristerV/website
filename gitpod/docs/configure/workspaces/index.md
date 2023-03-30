@@ -72,11 +72,6 @@ See the [Gitpod CLI](/docs/references/gitpod-cli) page for more.
 
 You can test your configuration, including your `.gitpod.yml`, without leaving your workspace or committing your changes by using the `gp validate` command. This command opens a workspace (that runs from within your current workspace) which includes your configuration changes. Thus, allowing you to troubleshoot workspace configuration (ports, tasks, etc.) and more.
 
-<figure>
-<img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="npm rebuild startup and shutdown" src="/images/testing-changes/gp_rebuild.png">
-    <figcaption>Running and stopping the gp validate command</figcaption>
-</figure>
-
 You can use the `gp validate` command to test various configuration setups: simple workspace starts (without Prebuilds enabled), workspace starts using a Prebuild, or for debugging Prebuilds themselves. See below for the differences:
 
 | Command                  | Steps ran                     |
