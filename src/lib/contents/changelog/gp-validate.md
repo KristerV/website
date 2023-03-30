@@ -1,5 +1,5 @@
 ---
-title: Validate your `.gitpod.yml` without committing ! 🤘
+title: Validate your .gitpod.yml without committing ! 🤘
 alt: Lorem Ipsum
 date: 2023-03-31
 excerpt: Lorem Ipsum
@@ -17,8 +17,6 @@ customSlug: lorem-ipsum
 - With `gp validate` can now validate a configuration within the workspace without committing. This works in a very similar way to a regular Gitpod workspace start, allowing you to catch configuration mistakes earlier.
 - Using `gp validate --prebuild` you can create run a workspace just as a Prebuild would, which makes it easier to debug a Prebuild configuration by re-creating the exact state inside a running workspace.
 
-## Introducing `gp validate`
-
 The power of a [CDE](https://www.gitpod.io/cde) comes with a well-defined configuration. Because, when your workspace is configured, you can make use of ephemeral workspaces, multi-track development and other benefits of develping in the cloud.
 
 In Gitpod, your configuration is defined in your `gitpod.yml`.
@@ -27,21 +25,9 @@ To update a configuration, you would commit your `.gitpod.yml` and start a new w
 
 Which is why we are "shifting left" and bringing errors, validation and suggestions closer to when you are actually developing on and iterating on your configuration. The new Gitpod command `gp validate` allows you to do exactly this! Validate and test your configuration changes without committing, or leaving your workspace!
 
+`gp validate` is included in every workspace. It works by creating a "workspace within your workspace" using Docker. The command mounts your `/workspace` directory, and pulls through all necessary information such as environment variables. By building a workspace within your existing workspace, we can heavily cache changes as Docker layers, making the update cycle to your configuration ⚡️ super, super fast ⚡️.
+
 For more, see [configuring workspaces](/docs/configure/workspaces).
-
-## How does `gp validate` work?
-
-`gp validate` is a included in every workspace. It works by creating a "workspace within your workspace" using Docker. The command mounts your `/workspace` directory, and pulls through all necessary information such as environment variables. By building a workspace within your existing workspace, we can heavily cache changes as Docker layers, making the update cycle to your configuration ⚡️ super, super fast ⚡️.
-
-## What's next?
-
-### Improved linting & best practices
-
-Through the `gp validate` command, Gitpod has the opportunity to share more tips and tricks with our users to improve their configurations.For instance, we can better showcase new features of Gitpod and help users avoid common gotchas such as not adding an explicit base image to a workspace configuration.
-
-### Simpler workspace restarts
-
-The `gp validate` command should be all you need to get confidence your configurations work. For those who do a lot of gitpod configuring, we are also looking for ways to make it easier to restart a workspace when you're finished validating changes with `gp validate`.
 
 ## FAQs
 
