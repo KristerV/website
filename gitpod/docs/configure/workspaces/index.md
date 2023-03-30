@@ -51,9 +51,8 @@ ports:
 
 In addition to the `gitpod.yml` you can also specify a workspace image for:
 
-1. Improved caching and performance
-2. Application portability
-3. Re-using an existing Dockerfile
+1. Application portability
+2. Re-using an existing Dockerfile
 
 Currently, Gitpod only supports Docker for workspace images. The Dockerfile can either be kept alongside your Gitpod configuration, or you can consume an existing public, or private image.
 
@@ -112,7 +111,7 @@ To apply your changes for all subsequent workspaces, commit and push the `gitpod
 Open the commit in a new workspace by either:
 
 1. Prefixing your repo URL with `https://gitpod.io/#`
-   - **For example:** https://gitpod.io/#https://github.com/nodejs/node)
+   - **For example:** https://gitpod.io/#https://github.com/nodejs/node
 2. Opening a new workspace from the [Gitpod dashboard](https://gitpod.io/dashboard)
 3. Installing, and using the [Gitpod Browser Extension](/docs/configure/user-settings/browser-extension#browser-extension)
 

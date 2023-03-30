@@ -19,11 +19,9 @@ customSlug: lorem-ipsum
 
 The power of a [CDE](https://www.gitpod.io/cde) comes with a well-defined configuration. Because, when your workspace is configured, you can make use of ephemeral workspaces, multi-track development and other benefits of develping in the cloud.
 
-In Gitpod, your configuration is defined in your `gitpod.yml`.
-
 To update a configuration, you would commit your `.gitpod.yml` and start a new workspace. This process would delay the time to finding out a configuration was incorrect, and in the mean time pollute your source control with commits like: "_updates_", "_next_", "_please work!_", "_please work this time_" — yeah, we know how it feels!
 
-Which is why we are "shifting left" and bringing errors, validation and suggestions closer to when you are actually developing on and iterating on your configuration. The new Gitpod command `gp validate` allows you to do exactly this! Validate and test your configuration changes without committing, or leaving your workspace!
+Which is why we are "shifting left" and bringing errors, validation and suggestions closer to when you are actually developing on and iterating on your configuration. The new Gitpod command `gp validate` allows you to do exactly this: validate your configuration changes without committing, or leaving your workspace!
 
 `gp validate` is included in every workspace. It works by creating a "workspace within your workspace" using Docker. The command mounts your `/workspace` directory, and pulls through all necessary information such as environment variables. By building a workspace within your existing workspace, we can heavily cache changes as Docker layers, making the update cycle to your configuration ⚡️ super, super fast ⚡️.
 
