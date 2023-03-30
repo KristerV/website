@@ -71,37 +71,37 @@ See the [Gitpod CLI](/docs/references/gitpod-cli) page for more.
 
 ## Validate your Gitpod configuration
 
-You can test your configuration, including your `.gitpod.yml`, without leaving your workspace or committing your changes by using the `gp rebuild` command. This command opens a workspace (that runs from within your current workspace) which includes your configuration changes. Thus, allowing you to troubleshoot workspace configuration (ports, tasks, etc.) and more.
+You can test your configuration, including your `.gitpod.yml`, without leaving your workspace or committing your changes by using the `gp validate` command. This command opens a workspace (that runs from within your current workspace) which includes your configuration changes. Thus, allowing you to troubleshoot workspace configuration (ports, tasks, etc.) and more.
 
 <figure>
 <img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="npm rebuild startup and shutdown" src="/images/testing-changes/gp_rebuild.png">
-    <figcaption>Running and stopping the gp rebuild command</figcaption>
+    <figcaption>Running and stopping the gp validate command</figcaption>
 </figure>
 
-You can use the `gp rebuild` command to test various configuration setups: simple workspace starts (without Prebuilds enabled), workspace starts using a Prebuild, or for debugging Prebuilds themselves. See below for the differences:
+You can use the `gp validate` command to test various configuration setups: simple workspace starts (without Prebuilds enabled), workspace starts using a Prebuild, or for debugging Prebuilds themselves. See below for the differences:
 
-| Command                 | Steps ran                     |
-| ----------------------- | ----------------------------- |
-| `gp rebuild`            | `before` + `init` + `command` |
-| `gp rebuild --prebuild` | `before` + `init`             |
+| Command                  | Steps ran                     |
+| ------------------------ | ----------------------------- |
+| `gp validate`            | `before` + `init` + `command` |
+| `gp validate --prebuild` | `before` + `init`             |
 
-<!-- | `gp rebuild --from="prebuild"` | `before` + `command`          | -->
+<!-- | `gp validate --from="prebuild"` | `before` + `command`          | -->
 
 > **Tip:** For improved speed and convienience whilst updating your workspace configuration, consider starting your worksapce using a large [Workspace Class](/docs/configure/workspaces/workspace-classes).
 
 ### Validate a workspace start
 
-1. Run `gp rebuild` to emit a Workspace URL.
+1. Run `gp validate` to emit a Workspace URL.
 2. Open the workspace and review your configuration.
-3. Update your configuration in the original workspace, and re-run `gp rebuild` (if needed).
+3. Update your configuration in the original workspace, and re-run `gp validate` (if needed).
 
 ### Validate a Prebuild
 
-You can run `gp rebuild --prebuild` to validate how a prebuild process would look upon completion (this runs `before` and `init` tasks, but not `command` tasks).
+You can run `gp validate --prebuild` to validate how a prebuild process would look upon completion (this runs `before` and `init` tasks, but not `command` tasks).
 
-1. Run `gp rebuild --prebuild` - This command will emit a Workspace URL.
+1. Run `gp validate --prebuild` - This command will emit a Workspace URL.
 2. Open the workspace to check your configuration.
-3. Update configuration in the original workspace, re-running `gp rebuild` if needed.
+3. Update configuration in the original workspace, re-running `gp validate` if needed.
 
 > **Important:** This command runs the workspace _as_ a Prebuild not _from_ a prebuild. Meaning this produces the same environment that is created by a Prebuild process, before a workspace is subsequently started using it.
 

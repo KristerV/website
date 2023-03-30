@@ -76,7 +76,7 @@ Opening a repository in Gitpod starts a workspace and clones the source code. To
 
 1. Add a `.gitpod.yml` at the root of your repository.
    - You can use `gp init` to quickly generate the `.gitpod.yml` file.
-2. Use the `gp rebuild` command to validate your configuration is working.
+2. Use the `gp validate` command to validate your configuration is working.
 3. Commit and push to apply the configuration for all subsequent workspace starts.
 
 Every opened workspace will now run the steps defined in your `gitpod.yml`.

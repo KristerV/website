@@ -26,7 +26,6 @@ Available Commands:
   open                Opens a file in Gitpod
   ports               Interact with workspace ports.
   preview             Opens a URL in the IDE's preview
-  rebuild             Re-builds the workspace image (useful to debug a workspace custom image)
   snapshot            Take a snapshot of the current workspace
   stop                Stop current workspace
   sync-await          Awaits an event triggered using gp sync-done
@@ -35,6 +34,7 @@ Available Commands:
   timeout             Interact with workspace timeout configuration
   top                 Display workspace resource (CPU and memory usage)
   url                 Prints the URL of this workspace
+  validate            [experimental] Validates the workspace (useful to debug a workspace configuration)
   version             Prints the version of the CLI
 
 Flags:
@@ -55,14 +55,14 @@ Example to start a interactive guide of `.gitpod.yml` configuration file:
 gp init -i
 ```
 
-## rebuild
+## validate
 
-> The `gp rebuild` command is currently in [Beta](/docs/help/public-roadmap/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/7671).
+> The `gp validate` command is currently in [Beta](/docs/help/public-roadmap/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/7671).
 
 Validates the workspace configuration in `.gitpod.yml` and workspace images.
 
 ```sh
-gp rebuild
+gp validate
 ```
 
 ## open
