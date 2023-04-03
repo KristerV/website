@@ -87,6 +87,11 @@
         <li>
           <FooterLink href="/solutions/onboarding">Onboarding</FooterLink>
         </li>
+        <li>
+          <FooterLink href="/solutions/supply-chain-security"
+            >Supply chain security</FooterLink
+          >
+        </li>
       </Section>
       <Section title="Industries">
         <li>
