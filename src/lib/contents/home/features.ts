@@ -1,5 +1,5 @@
 import type { Feature, verticalFeature } from "$lib/types/feature";
-import { terminalSource, linuxSource } from "../terminal";
+import { terminalSource, linuxSource, gibberishSource } from "../terminal";
 // @ts-ignore
 import Workspaces from "$lib/components/workspaces.svelte";
 import type { Card } from "$lib/types/card";
@@ -296,11 +296,12 @@ export const allYourDataSecured: Feature = {
   title: "All your data secured",
   paragraph:
     "All data is encrypted at rest and all connections to CDEs are encrypted in transit.",
-  image: {
-    src: "/svg/icons/lock.svg",
-    alt: "All your data secured",
-    width: "24%",
-    height: "24%",
+  terminal: {
+    source: gibberishSource,
+    dark: true,
+    shadow: false,
+    narrow: true,
+    skipToEnd: false,
   },
 };
 
@@ -309,10 +310,11 @@ export const lockDownYourSourceCode: Feature = {
   paragraph:
     "Secure your source code by keeping it in one, centralised location that you control - the cloud.",
   image: {
-    src: "/svg/icons/cloud.svg",
+    src: "/images/features/source-code-cloud.webp",
+    darkSrc: "/images/features/source-code-cloud-dark.webp",
     alt: "All your data secured",
-    width: "33%",
-    height: "33%",
+    width: "100%",
+    height: "50%",
   },
 };
 
@@ -322,6 +324,7 @@ export const secureDataMovement: Feature = {
     "Gitpod is GDPR compliant, SOC 2 Type II compliant and provides clients with Data Processing Agreements (DPA) incorporating the Standard Contractual Clauses (SCC) for International Data Transfers.",
   image: {
     src: "/images/features/secure-data.webp",
+    darkSrc: "/images/features/secure-data-dark.webp",
     alt: "Secure data movement",
     width: "75%",
     height: "75%",
