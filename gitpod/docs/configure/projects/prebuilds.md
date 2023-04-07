@@ -107,6 +107,8 @@ Prebuilds save **only** the workspace directory. Other directories like the home
 
 To use global installs like 'npm install -g', we suggest using a custom Dockerfile or a `before` task, which runs before the init task, and runs again before the command task.
 
+Anything you do in the Dockerfile will be saved across the image, but the `/workspace` directory is actually mounted into the image after the build. So changes you make in a session will only be saved if they're in the `/workspace` directory, but setting up your environment is not limited to this space, in fact it will be overwritten after the image build.
+
 #### Project environment variables
 
 Environment variables which are defined in project settings will be visible in prebuilds. This is useful for prebuilds to access restricted services.
